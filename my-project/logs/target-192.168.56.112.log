@@ -1,0 +1,837 @@
+a-a-u for pallet.core.user.User@7618033c
+default-executor
+default-executor script [{:language :bash} "echo 'package-manager update ...';\n{\n    # package.clj:468\n    # lib.clj:585\nyum makecache -q\n } || { echo '#> package-manager update  : FAIL'; exit 1;} >&2 \necho '#> package-manager update  : SUCCESS'\n"]
+192.168.56.112  pallet.actions/package-manager
+SSH user root :pk-path null :pk null
+attempt-connect username: root  password: vmfest
+SSH connecting {:server "192.168.56.112", :port 22}
+Create ssh transport state: {:server "192.168.56.112", :port 22}
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script echo 'package-manager update ...';
+192.168.56.112 script {
+192.168.56.112 script     # package.clj:468
+192.168.56.112 script     # lib.clj:585
+192.168.56.112 script yum makecache -q
+192.168.56.112 script  } || { echo '#> package-manager update  : FAIL'; exit 1;} >&2 
+192.168.56.112 script echo '#> package-manager update  : SUCCESS'
+192.168.56.112 script 
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via pallet4Jnlg as root
+192.168.56.112 output => package-manager update ...
+192.168.56.112 #> package-manager update  : SUCCESS
+default-executor
+default-executor script [{:language :bash} "echo '[automated-admin-user: install]: Packages...';\n{\n# package.clj:154\nyum install -q -y sudo && \\\n# package.clj:162\n    # lib.clj:607\nyum list installed\n } || { echo '#> [automated-admin-user: install]: Packages : FAIL'; exit 1;} >&2 \necho '#> [automated-admin-user: install]: Packages : SUCCESS'\n"]
+192.168.56.112 [automated-admin-user: install]: pallet.actions/package
+SSH user root :pk-path null :pk null
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script echo '[automated-admin-user: install]: Packages...';
+192.168.56.112 script {
+192.168.56.112 script # package.clj:154
+192.168.56.112 script yum install -q -y sudo && \
+192.168.56.112 script # package.clj:162
+192.168.56.112 script     # lib.clj:607
+192.168.56.112 script yum list installed
+192.168.56.112 script  } || { echo '#> [automated-admin-user: install]: Packages : FAIL'; exit 1;} >&2 
+192.168.56.112 script echo '#> [automated-admin-user: install]: Packages : SUCCESS'
+192.168.56.112 script 
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via palletQHpdw as root
+192.168.56.112 output => [automated-admin-user: install]: Packages...
+192.168.56.112 output => Package sudo-1.7.4p5-2.fc14.x86_64 already installed and latest version
+192.168.56.112 output => Loaded plugins: langpacks, presto
+192.168.56.112 output => Adding en_US to language list
+192.168.56.112 output => Installed Packages
+192.168.56.112 output => ConsoleKit.x86_64                     0.4.2-3.fc14                      @updates
+192.168.56.112 output => ConsoleKit-libs.x86_64                0.4.2-3.fc14                      @updates
+192.168.56.112 output => ModemManager.x86_64                   0.4.998-1.git20110706.fc14        @updates
+192.168.56.112 output => NetworkManager.x86_64                 1:0.8.5.92-1.git20110927.fc14     @updates
+192.168.56.112 output => NetworkManager-glib.x86_64            1:0.8.5.92-1.git20110927.fc14     @updates
+192.168.56.112 output => acl.x86_64                            2.2.49-9.fc14                     @updates
+192.168.56.112 output => acpid.x86_64                          2.0.9-1.fc14                      @updates
+192.168.56.112 output => at.x86_64                             3.1.12-6.fc14                     @updates
+192.168.56.112 output => attr.x86_64                           2.4.44-6.fc14                     @updates
+192.168.56.112 output => audit.x86_64                          2.1.3-1.fc14                      @updates
+192.168.56.112 output => audit-libs.x86_64                     2.1.3-1.fc14                      @updates
+192.168.56.112 output => authconfig.x86_64                     6.1.11-1.fc14                     @updates
+192.168.56.112 output => avahi-autoipd.x86_64                  0.6.27-8.fc14                     @updates
+192.168.56.112 output => basesystem.noarch                     10.0-3                            @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => bash.x86_64                           4.1.7-4.fc14                      @updates
+192.168.56.112 output => bc.x86_64                             1.06.95-2.fc14                    @updates
+192.168.56.112 output => bind-libs.x86_64                      32:9.7.4-2.P1.fc14                @updates
+192.168.56.112 output => bind-utils.x86_64                     32:9.7.4-2.P1.fc14                @updates
+192.168.56.112 output => binutils.x86_64                       2.20.51.0.7-8.fc14                @updates
+192.168.56.112 output => bzip2.x86_64                          1.0.6-1.fc14.1                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => bzip2-libs.x86_64                     1.0.6-1.fc14.1                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => c-ares.x86_64                         1.7.3-4.fc14                      @updates
+192.168.56.112 output => ca-certificates.noarch                2011.78-1.fc14                    @updates
+192.168.56.112 output => cairo.x86_64                          1.10.2-1.fc14                     @updates
+192.168.56.112 output => checkpolicy.x86_64                    2.0.23-2.fc14                     @updates
+192.168.56.112 output => chkconfig.x86_64                      1.3.49-1.fc14                     @updates
+192.168.56.112 output => cloog-ppl.x86_64                      0.15.7-2.fc14                     @fedora 
+192.168.56.112 output => coreutils.x86_64                      8.5-7.fc14                        @updates
+192.168.56.112 output => coreutils-libs.x86_64                 8.5-7.fc14                        @updates
+192.168.56.112 output => cpio.x86_64                           2.11-2.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => cpp.x86_64                            4.5.1-4.fc14                      @fedora 
+192.168.56.112 output => cracklib.x86_64                       2.8.16-4.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => cracklib-dicts.x86_64                 2.8.16-4.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => crda.x86_64                           1.1.1_2010.11.22-1.fc14           @updates
+192.168.56.112 output => cronie.x86_64                         1.4.8-2.fc14                      @updates
+192.168.56.112 output => cronie-anacron.x86_64                 1.4.8-2.fc14                      @updates
+192.168.56.112 output => crontabs.noarch                       1.11-1.20101115git.fc14           @updates
+192.168.56.112 output => curl.x86_64                           7.21.0-10.fc14                    @updates
+192.168.56.112 output => cyrus-sasl.x86_64                     2.1.23-12.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => cyrus-sasl-gssapi.x86_64              2.1.23-12.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => cyrus-sasl-lib.x86_64                 2.1.23-12.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => cyrus-sasl-plain.x86_64               2.1.23-12.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => dash.x86_64                           0.5.6-4.fc14                      @updates
+192.168.56.112 output => db4.x86_64                            4.8.30-2.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => db4-utils.x86_64                      4.8.30-2.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => dbus.x86_64                           1:1.4.0-3.fc14                    @updates
+192.168.56.112 output => dbus-glib.x86_64                      0.86-4.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => dbus-libs.x86_64                      1:1.4.0-3.fc14                    @updates
+192.168.56.112 output => dbus-python.x86_64                    0.83.0-7.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => deltarpm.x86_64                       3.6-0.6.20110223git.fc14          @updates
+192.168.56.112 output => device-mapper.x86_64                  1.02.63-2.fc14                    @updates
+192.168.56.112 output => device-mapper-event.x86_64            1.02.63-2.fc14                    @updates
+192.168.56.112 output => device-mapper-event-libs.x86_64       1.02.63-2.fc14                    @updates
+192.168.56.112 output => device-mapper-libs.x86_64             1.02.63-2.fc14                    @updates
+192.168.56.112 output => dhclient.x86_64                       12:4.2.0-23.P2.fc14               @updates
+192.168.56.112 output => diffutils.x86_64                      2.8.1-29.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => dkms.noarch                           2.1.0.1-1.fc12                    @fedora 
+192.168.56.112 output => dnsmasq.x86_64                        2.52-1.fc13                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => dracut.noarch                         006-6.fc14                        @updates
+192.168.56.112 output => e2fsprogs.x86_64                      1.41.12-6.fc14                    @updates
+192.168.56.112 output => e2fsprogs-libs.x86_64                 1.41.12-6.fc14                    @updates
+192.168.56.112 output => ed.x86_64                             1.4-2.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => efibootmgr.x86_64                     0.5.4-9.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => elfutils-libelf.x86_64                0.152-1.fc14                      @updates
+192.168.56.112 output => expat.x86_64                          2.0.1-10.fc13                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => fedora-logos.noarch                   14.0.2-1.fc14                     @updates
+192.168.56.112 output => fedora-release.noarch                 14-1                              @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => file.x86_64                           5.04-17.fc14                      @updates
+192.168.56.112 output => file-libs.x86_64                      5.04-17.fc14                      @updates
+192.168.56.112 output => filesystem.x86_64                     2.4.35-1.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => findutils.x86_64                      1:4.5.9-2.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => fipscheck.x86_64                      1.2.0-4.fc13                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => fipscheck-lib.x86_64                  1.2.0-4.fc13                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => fontconfig.x86_64                     2.8.0-2.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => freetype.x86_64                       2.4.2-7.fc14                      @updates
+192.168.56.112 output => gamin.x86_64                          0.1.10-8.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => gawk.x86_64                           3.1.8-3.fc14                      @updates
+192.168.56.112 output => gcc.x86_64                            4.5.1-4.fc14                      @fedora 
+192.168.56.112 output => gdbm.x86_64                           1.8.3-8.fc14                      @updates
+192.168.56.112 output => glib2.x86_64                          2.26.0-2.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => glibc.x86_64                          2.13-2                            @updates
+192.168.56.112 output => glibc-common.x86_64                   2.13-2                            @updates
+192.168.56.112 output => glibc-devel.x86_64                    2.13-2                            @updates
+192.168.56.112 output => glibc-headers.x86_64                  2.13-2                            @updates
+192.168.56.112 output => gmp.x86_64                            4.3.1-7.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => gnupg2.x86_64                         2.0.18-1.fc14                     @updates
+192.168.56.112 output => gobject-introspection.x86_64          0.9.3-1.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => gpgme.x86_64                          1.2.0-3.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => grep.x86_64                           2.8-2.fc14                        @updates
+192.168.56.112 output => groff.x86_64                          1.20.1-3.fc14                     @updates
+192.168.56.112 output => grub.x86_64                           1:0.97-66.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => grubby.x86_64                         7.0.16-1.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => gzip.x86_64                           1.4-1.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => hesiod.x86_64                         3.1.0-19.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => hostname.x86_64                       3.04-2.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => hunspell.x86_64                       1.2.12-4.fc14                     @updates
+192.168.56.112 output => hunspell-en.noarch                    0.20100322-6.fc14                 @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => hwdata.noarch                         0.232-1.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => info.x86_64                           4.13a-13.fc14                     @updates
+192.168.56.112 output => initscripts.x86_64                    9.20.2-1.fc14.1                   @updates
+192.168.56.112 output => iproute.x86_64                        2.6.35-9.fc14                     @updates
+192.168.56.112 output => iptables.x86_64                       1.4.9-1.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => iptables-ipv6.x86_64                  1.4.9-1.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => iputils.x86_64                        20100418-3.fc14                   @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => iw.x86_64                             0.9.22-1.fc14.1                   @updates
+192.168.56.112 output => kbd.x86_64                            1.15-11.fc14                      @anaconda-Installa
+192.168.56.112 output => tionRepo-201010211827.x86_64
+192.168.56.112 output => kbd-misc.noarch                       1.15-11.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => kernel.x86_64                         2.6.35.6-45.fc14                  @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => kernel.x86_64                         2.6.35.14-106.fc14                @updates
+192.168.56.112 output => kernel-devel.x86_64                   2.6.35.14-106.fc14                @updates
+192.168.56.112 output => kernel-headers.x86_64                 2.6.35.14-106.fc14                @updates
+192.168.56.112 output => keyutils-libs.x86_64                  1.2-6.fc12                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => krb5-libs.x86_64                      1.8.4-3.fc14                      @updates
+192.168.56.112 output => less.x86_64                           436-11.fc14                       @updates
+192.168.56.112 output => libX11.x86_64                         1.3.4-4.fc14                      @updates
+192.168.56.112 output => libX11-common.noarch                  1.3.4-4.fc14                      @updates
+192.168.56.112 output => libXau.x86_64                         1.0.6-1.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libXrender.x86_64                     0.9.6-1.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libacl.x86_64                         2.2.49-9.fc14                     @updates
+192.168.56.112 output => libassuan.x86_64                      2.0.0-2.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libattr.x86_64                        2.4.44-6.fc14                     @updates
+192.168.56.112 output => libblkid.x86_64                       2.18-4.8.fc14                     @updates
+192.168.56.112 output => libcap.x86_64                         2.22-1.fc14                       @updates
+192.168.56.112 output => libcap-ng.x86_64                      0.6.5-1.fc14                      @updates
+192.168.56.112 output => libcgroup.x86_64                      0.36.2-7.fc14                     @updates
+192.168.56.112 output => libcollection.x86_64                  0.6.1-5.fc14                      @updates
+192.168.56.112 output => libcom_err.x86_64                     1.41.12-6.fc14                    @updates
+192.168.56.112 output => libcurl.x86_64                        7.21.0-10.fc14                    @updates
+192.168.56.112 output => libdaemon.x86_64                      0.14-1.fc13                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libdb.x86_64                          5.0.26-2.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libdhash.x86_64                       0.4.3-5.fc14                      @updates
+192.168.56.112 output => libdrm.x86_64                         2.4.22-1.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libedit.x86_64                        3.0-3.20090923cvs.fc14            @updates
+192.168.56.112 output => libffi.x86_64                         3.0.9-1.fc13                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libgcc.x86_64                         4.5.1-4.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libgcrypt.x86_64                      1.4.5-4.fc13                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libgomp.x86_64                        4.5.1-4.fc14                      @fedora 
+192.168.56.112 output => libgpg-error.x86_64                   1.9-1.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libgssglue.x86_64                     0.1-8.fc12                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libgudev1.x86_64                      161-10.fc14                       @updates
+192.168.56.112 output => libidn.x86_64                         1.18-1.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libini_config.x86_64                  0.6.2-5.fc14                      @updates
+192.168.56.112 output => libipa_hbac.x86_64                    1.5.12-1.fc14                     @updates
+192.168.56.112 output => libldb.x86_64                         0.9.10-24.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libmount.x86_64                       2.18-4.8.fc14                     @updates
+192.168.56.112 output => libmpc.x86_64                         0.8.1-1.fc13                      @fedora 
+192.168.56.112 output => libnih.x86_64                         1.0.2-2.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libnl.x86_64                          1.1-14.fc14                       @updates
+192.168.56.112 output => libpath_utils.x86_64                  0.2.1-5.fc14                      @updates
+192.168.56.112 output => libpcap.x86_64                        14:1.1.1-3.fc14                   @updates
+192.168.56.112 output => libpng.x86_64                         2:1.2.46-1.fc14                   @updates
+192.168.56.112 output => libref_array.x86_64                   0.1.2-5.fc14                      @updates
+192.168.56.112 output => libselinux.x86_64                     2.0.96-6.fc14.1                   @updates
+192.168.56.112 output => libselinux-utils.x86_64               2.0.96-6.fc14.1                   @updates
+192.168.56.112 output => libsemanage.x86_64                    2.0.45-5.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libsepol.x86_64                       2.0.41-3.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libss.x86_64                          1.41.12-6.fc14                    @updates
+192.168.56.112 output => libssh2.x86_64                        1.2.4-1.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libstdc++.x86_64                      4.5.1-4.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libtalloc.x86_64                      2.0.1-1.fc13                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libtdb.x86_64                         1.2.1-3.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libtevent.x86_64                      0.9.8-7.1.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libtirpc.x86_64                       0.2.1-4.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libudev.x86_64                        161-10.fc14                       @updates
+192.168.56.112 output => libunistring.x86_64                   0.9.3-1.fc14                      @fedora 
+192.168.56.112 output => libusb.x86_64                         0.1.12-23.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libuser.x86_64                        0.56.18-3.fc14                    @updates
+192.168.56.112 output => libutempter.x86_64                    1.1.5-4.fc12                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libuuid.x86_64                        2.18-4.8.fc14                     @updates
+192.168.56.112 output => libxcb.x86_64                         1.7-1.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => libxml2.x86_64                        2.7.7-3.fc14                      @updates
+192.168.56.112 output => libxml2-python.x86_64                 2.7.7-3.fc14                      @updates
+192.168.56.112 output => linux-atm-libs.x86_64                 2.5.1-1.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => linux-firmware.noarch                 20110304-1.fc14                   @updates
+192.168.56.112 output => logrotate.x86_64                      3.7.9-4.fc14                      @updates
+192.168.56.112 output => lsof.x86_64                           4.83-2.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => lua.x86_64                            5.1.4-7.fc14                      @updates
+192.168.56.112 output => lvm2.x86_64                           2.02.84-2.fc14                    @updates
+192.168.56.112 output => lvm2-libs.x86_64                      2.02.84-2.fc14                    @updates
+192.168.56.112 output => m4.x86_64                             1.4.14-1.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => mailcap.noarch                        2.1.35-1.fc14                     @updates
+192.168.56.112 output => make.x86_64                           1:3.82-3.fc14                     @updates
+192.168.56.112 output => man-db.x86_64                         2.5.7-9.fc14                      @updates
+192.168.56.112 output => mingetty.x86_64                       1.08-6.fc14                       @updates
+192.168.56.112 output => mobile-broadband-provider-info.noarch 1.20110218-1.fc14                 @updates
+192.168.56.112 output => module-init-tools.x86_64              3.11.1-6.fc14                     @updates
+192.168.56.112 output => mpfr.x86_64                           2.4.2-1.fc13                      @fedora 
+192.168.56.112 output => ncurses.x86_64                        5.7-9.20100703.fc14               @updates
+192.168.56.112 output => ncurses-base.x86_64                   5.7-9.20100703.fc14               @updates
+192.168.56.112 output => ncurses-libs.x86_64                   5.7-9.20100703.fc14               @updates
+192.168.56.112 output => net-tools.x86_64                      1.60-105.fc14.1                   @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => newt.x86_64                           0.52.12-1.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => newt-python.x86_64                    0.52.12-1.fc14                    @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => nspr.x86_64                           4.8.8-1.fc14                      @updates
+192.168.56.112 output => nss.x86_64                            3.12.10-7.fc14                    @updates
+192.168.56.112 output => nss-softokn.x86_64                    3.12.10-1.fc14                    @updates
+192.168.56.112 output => nss-softokn-freebl.x86_64             3.12.10-1.fc14                    @updates
+192.168.56.112 output => nss-sysinit.x86_64                    3.12.10-7.fc14                    @updates
+192.168.56.112 output => nss-util.x86_64                       3.12.10-1.fc14                    @updates
+192.168.56.112 output => ntsysv.x86_64                         1.3.49-1.fc14                     @updates
+192.168.56.112 output => openldap.x86_64                       2.4.23-10.fc14                    @updates
+192.168.56.112 output => openssh.x86_64                        5.5p1-24.fc14.2                   @updates
+192.168.56.112 output => openssh-clients.x86_64                5.5p1-24.fc14.2                   @updates
+192.168.56.112 output => openssh-server.x86_64                 5.5p1-24.fc14.2                   @updates
+192.168.56.112 output => openssl.x86_64                        1.0.0e-1.fc14                     @updates
+192.168.56.112 output => pam.x86_64                            1.1.1-6.fc14                      @updates
+192.168.56.112 output => parted.x86_64                         2.3-5.fc14                        @updates
+192.168.56.112 output => passwd.x86_64                         0.78-1.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => pciutils.x86_64                       3.1.7-3.fc14                      @updates
+192.168.56.112 output => pciutils-libs.x86_64                  3.1.7-3.fc14                      @updates
+192.168.56.112 output => pcre.x86_64                           8.10-2.fc14                       @updates
+192.168.56.112 output => perl.x86_64                           4:5.12.4-148.fc14                 @updates
+192.168.56.112 output => perl-Module-Pluggable.noarch          1:3.90-148.fc14                   @updates
+192.168.56.112 output => perl-Pod-Escapes.noarch               1:1.04-148.fc14                   @updates
+192.168.56.112 output => perl-Pod-Simple.noarch  
+192.168.56.112 output =>               1:3.13-148.fc14                   @updates
+192.168.56.112 output => perl-libs.x86_64                      4:5.12.4-148.fc14                 @updates
+192.168.56.112 output => perl-threads.x86_64                   1.81-1.fc14                       @fedora 
+192.168.56.112 output => perl-threads-shared.x86_64            1.32-148.fc14                     @updates
+192.168.56.112 output => pinentry.x86_64                       0.8.1-4.fc14                      @updates
+192.168.56.112 output => pixman.x86_64                         0.18.4-1.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => pkgconfig.x86_64                      1:0.25-2.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => plymouth.x86_64                       0.8.4-0.20100823.7.fc14           @updates
+192.168.56.112 output => plymouth-core-libs.x86_64             0.8.4-0.20100823.7.fc14           @updates
+192.168.56.112 output => plymouth-scripts.x86_64               0.8.4-0.20100823.7.fc14           @updates
+192.168.56.112 output => policycoreutils.x86_64                2.0.85-30.3.fc14                  @updates
+192.168.56.112 output => polkit.x86_64                         0.98-5.fc14                       @updates
+192.168.56.112 output => popt.x86_64                           1.13-7.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => ppl.x86_64                            0.10.2-10.fc12                    @fedora 
+192.168.56.112 output => ppp.x86_64                            2.4.5-12.fc14                     @updates
+192.168.56.112 output => procmail.x86_64                       3.22-25.fc12                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => procps.x86_64                         3.2.8-15.fc14                     @updates
+192.168.56.112 output => psacct.x86_64                         6.5.4-5.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => psmisc.x86_64                         22.13-6.fc14                      @updates
+192.168.56.112 output => pth.x86_64                            2.0.7-9                           @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => pygpgme.x86_64                        0.1-21.20101027bzr69.fc14         @updates
+192.168.56.112 output => python.x86_64                         2.7-8.fc14.1                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => python-ethtool.x86_64                 0.7-2.fc14                        @updates
+192.168.56.112 output => python-iniparse.noarch                0.4-2.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => python-iwlib.x86_64                   0.1-3.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => python-libs.x86_64                    2.7-8.fc14.1                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => python-pycurl.x86_64                  7.19.0-7.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => python-urlgrabber.noarch              3.9.1-7.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => quota.x86_64                          1:3.17-18.fc14                    @updates
+192.168.56.112 output => readline.x86_64                       6.1-2.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => rootfiles.noarch                      8.1-6.fc12                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => rpcbind.x86_64                        0.2.0-8.fc14                      @updates
+192.168.56.112 output => rpm.x86_64                            4.8.1-7.fc14                      @updates
+192.168.56.112 output => rpm-libs.x86_64                       4.8.1-7.fc14                      @updates
+192.168.56.112 output => rpm-python.x86_64                     4.8.1-7.fc14                      @updates
+192.168.56.112 output => rsync.x86_64                          3.0.8-2.fc14                      @updates
+192.168.56.112 output => rsyslog.x86_64                        4.6.3-3.fc14                      @updates
+192.168.56.112 output => sed.x86_64                            4.2.1-6.fc14                      @updates
+192.168.56.112 output => selinux-policy.noarch                 3.9.7-46.fc14                     @updates
+192.168.56.112 output => selinux-policy-targeted.noarch        3.9.7-46.fc14                     @updates
+192.168.56.112 output => sendmail.x86_64                       8.14.4-10.fc14                    @updates
+192.168.56.112 output => setserial.x86_64                      2.17-26.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => setup.noarch                          2.8.28-2.fc14                     @updates
+192.168.56.112 output => shadow-utils.x86_64                   2:4.1.4.2-11.fc14                 @updates
+192.168.56.112 output => shared-mime-info.x86_64               0.80-1.fc14                       @updates
+192.168.56.112 output => slang.x86_64                          2.2.3-1.fc14                      @updates
+192.168.56.112 output => sos.noarch                            2.2-1.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => sqlite.x86_64                         3.6.23.1-1.fc14                   @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => sssd.x86_64                           1.5.12-1.fc14                     @updates
+192.168.56.112 output => sssd-client.x86_64                    1.5.12-1.fc14                     @updates
+192.168.56.112 output => stunnel.x86_64                        4.34-1.fc14                       @updates
+192.168.56.112 output => sudo.x86_64                           1.7.4p5-2.fc14                    @updates
+192.168.56.112 output => symlinks.x86_64                       1.4-2.fc13                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => system-config-firewall-base.noarch    1.2.27-2.fc14                     @updates
+192.168.56.112 output => system-config-firewall-tui.noarch     1.2.27-2.fc14                     @updates
+192.168.56.112 output => system-config-network-tui.noarch      1.6.2-1.fc14                      @updates
+192.168.56.112 output => systemd-units.x86_64                  10-2.fc14.1                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => sysvinit-tools.x86_64                 2.87-7.dsf.fc14                   @updates
+192.168.56.112 output => talk.x86_64                           0.17-33.2.4                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => tar.x86_64                            2:1.23-9.fc14                     @updates
+192.168.56.112 output => tcp_wrappers.x86_64                   7.6-59.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => tcp_wrappers-libs.x86_64              7.6-59.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => tcpdump.x86_64                        14:4.1.1-1.fc14                   @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => telnet.x86_64                         1:0.17-51.fc14                    @updates
+192.168.56.112 output => time.x86_64                           1.7-38.fc14                       @updates
+192.168.56.112 output => tmpwatch.x86_64                       2.10-1.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => traceroute.x86_64                     3:2.0.18-1.fc14                   @updates
+192.168.56.112 output => tree.x86_64                           1.5.3-2.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => tzdata.noarch                         2011n-2.fc14                      @updates
+192.168.56.112 output => udev.x86_64                           161-10.fc14                       @updates
+192.168.56.112 output => unzip.x86_64                          6.0-3.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => upstart.x86_64                        1.2-2.fc14                        @updates
+192.168.56.112 output => upstart-sysvinit.x86_64               1.2-2.fc14                        @updates
+192.168.56.112 output => usbutils.x86_64                       0.90-1.fc14                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => usermode.x86_64                       1.106.1-1.fc14.1                  @updates
+192.168.56.112 output => ustr.x86_64                           1.0.4-9.fc12                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => util-linux-ng.x86_64                  2.18-4.8.fc14                     @updates
+192.168.56.112 output => vconfig.x86_64                        1.9-8.fc12                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => vim-minimal.x86_64                    2:7.3.315-1.fc14                  @updates
+192.168.56.112 output => wget.x86_64                           1.12-4.fc14                       @updates
+192.168.56.112 output => which.x86_64                          2.19-5.fc12                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => wireless-tools.x86_64                 1:29-5.1.fc12                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => words.noarch                          3.0-16.fc12                       @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => wpa_supplicant.x86_64                 1:0.6.8-10.fc14                   @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => xz.x86_64                             4.999.9-0.2.beta.20100401git.fc14 @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => xz-libs.x86_64                        4.999.9-0.2.beta.20100401git.fc14 @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => yp-tools.x86_64                       2.11-6.fc14                       @updates
+192.168.56.112 output => ypbind.x86_64                         3:1.32-3.fc14                     @updates
+192.168.56.112 output => yum.noarch                            3.2.28-7.fc14                     @updates
+192.168.56.112 output => yum-langpacks.noarch                  0.1.5-3.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => yum-metadata-parser.x86_64            1.1.4-2.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => yum-presto.noarch                     0.6.2-2.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => yum-utils.noarch                      1.1.28-1.fc14                     @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => zip.x86_64                            3.0-2.fc14                        @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 output => zlib.x86_64                           1.2.5-2.fc14                      @anaconda-InstallationRepo-201010211827.x86_64
+192.168.56.112 #> [automated-admin-user: install]: Packages : SUCCESS
+default-executor
+default-executor script [{:language :bash} "    # user.clj:40\nif     # lib.clj:379\ngetent passwd duncan; then\n# user.clj:42\n    # lib.clj:422\n/usr/sbin/usermod --shell \"/bin/bash\" duncan\nelse\n# lib.clj:402\n/usr/sbin/useradd --shell \"/bin/bash\" --create-home duncan\nfi"]
+192.168.56.112 [automated-admin-user]: pallet.actions/user
+SSH user root :pk-path null :pk null
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script     # user.clj:40
+192.168.56.112 script if     # lib.clj:379
+192.168.56.112 script getent passwd duncan; then
+192.168.56.112 script # user.clj:42
+192.168.56.112 script     # lib.clj:422
+192.168.56.112 script /usr/sbin/usermod --shell "/bin/bash" duncan
+192.168.56.112 script else
+192.168.56.112 script # lib.clj:402
+192.168.56.112 script /usr/sbin/useradd --shell "/bin/bash" --create-home duncan
+192.168.56.112 script fi
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via pallet6n1bw as root
+default-executor
+default-executor script [{:language :bash} "echo 'automated-admin-user: authorize-user-key: authorize-key: Directory $(getent passwd duncan | cut -d: -f6)/.ssh/...';\n{\n# directory.clj:34\n    # lib.clj:301\nmkdir -m \"755\" -p $(getent passwd duncan | cut -d: -f6)/.ssh/ && \\\n# directory.clj:20\n    # lib.clj:144\nchown --recursive duncan $(getent passwd duncan | cut -d: -f6)/.ssh/ && \\\n# directory.clj:26\n    # lib.clj:152\nchmod 755 $(getent passwd duncan | cut -d: -f6)/.ssh/\n } || { echo '#> automated-admin-user: authorize-user-key: authorize-key: Directory $(getent passwd duncan | cut -d: -f6)/.ssh/ : FAIL'; exit 1;} >&2 \necho '#> automated-admin-user: authorize-user-key: authorize-key: Directory $(getent passwd duncan | cut -d: -f6)/.ssh/ : SUCCESS'\n"]
+192.168.56.112 automated-admin-user: authorize-user-key: authorize-key: pallet.actions/directory
+SSH user root :pk-path null :pk null
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script echo 'automated-admin-user: authorize-user-key: authorize-key: Directory $(getent passwd duncan | cut -d: -f6)/.ssh/...';
+192.168.56.112 script {
+192.168.56.112 script # directory.clj:34
+192.168.56.112 script     # lib.clj:301
+192.168.56.112 script mkdir -m "755" -p $(getent passwd duncan | cut -d: -f6)/.ssh/ && \
+192.168.56.112 script # directory.clj:20
+192.168.56.112 script     # lib.clj:144
+192.168.56.112 script chown --recursive duncan $(getent passwd duncan | cut -d: -f6)/.ssh/ && \
+192.168.56.112 script # directory.clj:26
+192.168.56.112 script     # lib.clj:152
+192.168.56.112 script chmod 755 $(getent passwd duncan | cut -d: -f6)/.ssh/
+192.168.56.112 script  } || { echo '#> automated-admin-user: authorize-user-key: authorize-key: Directory $(getent passwd duncan | cut -d: -f6)/.ssh/ : FAIL'; exit 1;} >&2 
+192.168.56.112 script echo '#> automated-admin-user: authorize-user-key: authorize-key: Directory $(getent passwd duncan | cut -d: -f6)/.ssh/ : SUCCESS'
+192.168.56.112 script 
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via palletAPmNy as root
+192.168.56.112 output => automated-admin-user: authorize-user-key: authorize-key: Directory $(getent passwd duncan | cut -d: -f6)/.ssh/...
+192.168.56.112 #> automated-admin-user: authorize-user-key: authorize-key: Directory $(getent passwd duncan | cut -d: -f6)/.ssh/ : SUCCESS
+default-executor
+default-executor script [{:language :bash} "echo 'automated-admin-user: authorize-user-key: authorize-key: file $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys...';\n{\n# file.clj:37\n    # lib.clj:156\ntouch $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys && \\\n# file.clj:16\n    # lib.clj:144\nchown duncan $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys && \\\n# file.clj:20\nchmod 644 $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys\n } || { echo '#> automated-admin-user: authorize-user-key: authorize-key: file $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys : FAIL'; exit 1;} >&2 \necho '#> automated-admin-user: authorize-user-key: authorize-key: file $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys : SUCCESS'\n"]
+192.168.56.112 automated-admin-user: authorize-user-key: authorize-key: pallet.actions/file
+SSH user root :pk-path null :pk null
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script echo 'automated-admin-user: authorize-user-key: authorize-key: file $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys...';
+192.168.56.112 script {
+192.168.56.112 script # file.clj:37
+192.168.56.112 script     # lib.clj:156
+192.168.56.112 script touch $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys && \
+192.168.56.112 script # file.clj:16
+192.168.56.112 script     # lib.clj:144
+192.168.56.112 script chown duncan $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys && \
+192.168.56.112 script # file.clj:20
+192.168.56.112 script chmod 644 $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys
+192.168.56.112 script  } || { echo '#> automated-admin-user: authorize-user-key: authorize-key: file $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys : FAIL'; exit 1;} >&2 
+192.168.56.112 script echo '#> automated-admin-user: authorize-user-key: authorize-key: file $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys : SUCCESS'
+192.168.56.112 script 
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via palletcUugh as root
+192.168.56.112 output => automated-admin-user: authorize-user-key: authorize-key: file $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys...
+192.168.56.112 #> automated-admin-user: authorize-user-key: authorize-key: file $(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys : SUCCESS
+default-executor
+default-executor script [{:language :bash} "echo 'automated-admin-user: authorize-user-key: authorize-key authorize-key on user duncan (ssh_key.clj:27)...';\n{\n# ssh_key.clj:29\nauth_file=$(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys && \\\n# ssh_key.clj:30\nif ! ( fgrep \"ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA5EoGFoDkZI2LTbf0o4quVEowEiMqpAcIkXdT632RWUk+LzkYYCHxHEBPs/szA4DiIOKEnDDxLeHWZOUaz4xZ3Ag/3UZ60yaYuag6j2697CpwMaIuRhCdS6bTmmDPqPOiOvCiimMe/mq16BRRPzd5Ss5/6ztvDqV5RkTYVCeJEewQ48PAQT+TA9s8rJp1r41US4Go1ivJqonmhzjeW1TVBp2o84Hloh052NKxfMcKeToCStgGrlGGMw+WmXe1zQTFznTBh2GQubXN06XoTBRoVoxEpVXszG3pxyGsSX6HA8E+GYyuBLDHkTkxkVwiGV1X+RkeS0anx9Z+swk8jPsCHw== duncan@cyclops\" ${auth_file} ); then\necho \"ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA5EoGFoDkZI2LTbf0o4quVEowEiMqpAcIkXdT632RWUk+LzkYYCHxHEBPs/szA4DiIOKEnDDxLeHWZOUaz4xZ3Ag/3UZ60yaYuag6j2697CpwMaIuRhCdS6bTmmDPqPOiOvCiimMe/mq16BRRPzd5Ss5/6ztvDqV5RkTYVCeJEewQ48PAQT+TA9s8rJp1r41US4Go1ivJqonmhzjeW1TVBp2o84Hloh052NKxfMcKeToCStgGrlGGMw+WmXe1zQTFznTBh2GQubXN06XoTBRoVoxEpVXszG3pxyGsSX6HA8E+GYyuBLDHkTkxkVwiGV1X+RkeS0anx9Z+swk8jPsCHw== duncan@cyclops\n\" >> ${auth_file}\nfi\n } || { echo '#> automated-admin-user: authorize-user-key: authorize-key authorize-key on user duncan (ssh_key.clj:27) : FAIL'; exit 1;} >&2 \necho '#> automated-admin-user: authorize-user-key: authorize-key authorize-key on user duncan (ssh_key.clj:27) : SUCCESS'\n"]
+192.168.56.112 automated-admin-user: authorize-user-key: authorize-key: pallet.actions/exec-script*
+SSH user root :pk-path null :pk null
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script echo 'automated-admin-user: authorize-user-key: authorize-key authorize-key on user duncan (ssh_key.clj:27)...';
+192.168.56.112 script {
+192.168.56.112 script # ssh_key.clj:29
+192.168.56.112 script auth_file=$(getent passwd duncan | cut -d: -f6)/.ssh/authorized_keys && \
+192.168.56.112 script # ssh_key.clj:30
+192.168.56.112 script if ! ( fgrep "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA5EoGFoDkZI2LTbf0o4quVEowEiMqpAcIkXdT632RWUk+LzkYYCHxHEBPs/szA4DiIOKEnDDxLeHWZOUaz4xZ3Ag/3UZ60yaYuag6j2697CpwMaIuRhCdS6bTmmDPqPOiOvCiimMe/mq16BRRPzd5Ss5/6ztvDqV5RkTYVCeJEewQ48PAQT+TA9s8rJp1r41US4Go1ivJqonmhzjeW1TVBp2o84Hloh052NKxfMcKeToCStgGrlGGMw+WmXe1zQTFznTBh2GQubXN06XoTBRoVoxEpVXszG3pxyGsSX6HA8E+GYyuBLDHkTkxkVwiGV1X+RkeS0anx9Z+swk8jPsCHw== duncan@cyclops" ${auth_file} ); then
+192.168.56.112 script echo "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA5EoGFoDkZI2LTbf0o4quVEowEiMqpAcIkXdT632RWUk+LzkYYCHxHEBPs/szA4DiIOKEnDDxLeHWZOUaz4xZ3Ag/3UZ60yaYuag6j2697CpwMaIuRhCdS6bTmmDPqPOiOvCiimMe/mq16BRRPzd5Ss5/6ztvDqV5RkTYVCeJEewQ48PAQT+TA9s8rJp1r41US4Go1ivJqonmhzjeW1TVBp2o84Hloh052NKxfMcKeToCStgGrlGGMw+WmXe1zQTFznTBh2GQubXN06XoTBRoVoxEpVXszG3pxyGsSX6HA8E+GYyuBLDHkTkxkVwiGV1X+RkeS0anx9Z+swk8jPsCHw== duncan@cyclops
+192.168.56.112 script " >> ${auth_file}
+192.168.56.112 script fi
+192.168.56.112 script  } || { echo '#> automated-admin-user: authorize-user-key: authorize-key authorize-key on user duncan (ssh_key.clj:27) : FAIL'; exit 1;} >&2 
+192.168.56.112 script echo '#> automated-admin-user: authorize-user-key: authorize-key authorize-key on user duncan (ssh_key.clj:27) : SUCCESS'
+192.168.56.112 script 
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via palletbjgMJ as root
+192.168.56.112 output => automated-admin-user: authorize-user-key: authorize-key authorize-key on user duncan (ssh_key.clj:27)...
+192.168.56.112 #> automated-admin-user: authorize-user-key: authorize-key authorize-key on user duncan (ssh_key.clj:27) : SUCCESS
+default-executor
+default-executor script [{:language :bash} "echo 'automated-admin-user: authorize-user-key: authorize-key Set selinux permissions (ssh_key.clj:32)...';\n{\n    # ssh_key.clj:34\n    # lib.clj:850\nif     # lib.clj:37\nhash chcon 2>&- && [ -d /etc/selinux ]; then chcon -Rv --type=user_home_t $(getent passwd duncan | cut -d: -f6)/.ssh/;fi\n } || { echo '#> automated-admin-user: authorize-user-key: authorize-key Set selinux permissions (ssh_key.clj:32) : FAIL'; exit 1;} >&2 \necho '#> automated-admin-user: authorize-user-key: authorize-key Set selinux permissions (ssh_key.clj:32) : SUCCESS'\n"]
+192.168.56.112 automated-admin-user: authorize-user-key: authorize-key: pallet.actions/exec-script*
+SSH user root :pk-path null :pk null
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script echo 'automated-admin-user: authorize-user-key: authorize-key Set selinux permissions (ssh_key.clj:32)...';
+192.168.56.112 script {
+192.168.56.112 script     # ssh_key.clj:34
+192.168.56.112 script     # lib.clj:850
+192.168.56.112 script if     # lib.clj:37
+192.168.56.112 script hash chcon 2>&- && [ -d /etc/selinux ]; then chcon -Rv --type=user_home_t $(getent passwd duncan | cut -d: -f6)/.ssh/;fi
+192.168.56.112 script  } || { echo '#> automated-admin-user: authorize-user-key: authorize-key Set selinux permissions (ssh_key.clj:32) : FAIL'; exit 1;} >&2 
+192.168.56.112 script echo '#> automated-admin-user: authorize-user-key: authorize-key Set selinux permissions (ssh_key.clj:32) : SUCCESS'
+192.168.56.112 script 
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via palletgZ9rA as root
+192.168.56.112 output => automated-admin-user: authorize-user-key: authorize-key Set selinux permissions (ssh_key.clj:32)...
+192.168.56.112 output => changing security context of `/home/duncan/.ssh/authorized_keys'
+192.168.56.112 output => changing security context of `/home/duncan/.ssh/'
+192.168.56.112 #> automated-admin-user: authorize-user-key: authorize-key Set selinux permissions (ssh_key.clj:32) : SUCCESS
+default-executor
+default-executor script [{:language :bash} "echo 'automated-admin-user: sudoers: remote-file /etc/sudoers...';\n{\n# remote_file.clj:75\nset -x && \\\n# remote_file.clj:76\n    # lib.clj:301\nmkdir -p $(dirname /var/lib/pallet/etc/sudoers.new) && \\\n# remote_file.clj:120\n    # lib.clj:287\n    # lib.clj:280\n{ cat > /var/lib/pallet/etc/sudoers.new <<EOFpallet\nroot ALL = (ALL) ALL\n%adm ALL = (ALL) ALL\nduncan ALL = (ALL) NOPASSWD: ALL\nEOFpallet\n } && \\\n# remote_file.clj:163\nfilediff= && \\\n# remote_file.clj:164\nif [ -e /etc/sudoers ] && [ -e /var/lib/pallet/etc/sudoers ]; then\n# remote_file.clj:166\n    # lib.clj:133\ndiff -u /etc/sudoers /var/lib/pallet/etc/sudoers\n    # remote_file.clj:167\nfilediff=$?\nfi && \\\n# remote_file.clj:169\nmd5diff= && \\\n# remote_file.clj:170\nif [ -e /var/lib/pallet/etc/sudoers ] && [ -e /var/lib/pallet/etc/sudoers.md5 ]; then\n# remote_file.clj:172\n    # lib.clj:218\n( cd $(dirname /var/lib/pallet/etc/sudoers.md5) && md5sum --status --check $(basename /var/lib/pallet/etc/sudoers.md5) )\n    # remote_file.clj:173\nmd5diff=$?\nfi && \\\n# remote_file.clj:175\ncontentdiff= && \\\n# remote_file.clj:176\nif [ -e /etc/sudoers ] && [ -e /var/lib/pallet/etc/sudoers.new ]; then\n# remote_file.clj:178\n    # lib.clj:133\ndiff -u /etc/sudoers /var/lib/pallet/etc/sudoers.new\n    # remote_file.clj:179\ncontentdiff=$?\nfi && \\\n# remote_file.clj:182\nerrexit=0 && \\\n# remote_file.clj:183\nif [ \"${filediff}\" == \"1\" ]; then\n# remote_file.clj:185\necho Existing file did not match the pallet master copy: FAIL\n    # remote_file.clj:187\nerrexit=1\nfi && \\\n# remote_file.clj:189\nif [ \"${md5diff}\" == \"1\" ]; then\n# remote_file.clj:191\necho Existing content did not match md5: FAIL\n    # remote_file.clj:192\nerrexit=1\nfi && \\\n# remote_file.clj:195\n[ \"${errexit}\" == \"0\" ] && \\\n# remote_file.clj:198\nif ! ( [ \"${contentdiff}\" == \"0\" ] ) && [ -e /var/lib/pallet/etc/sudoers.new ]; then\n# remote_file.clj:202\n    # lib.clj:76\ncp -f --backup=\"numbered\" /var/lib/pallet/etc/sudoers.new /var/lib/pallet/etc/sudoers\n    # remote_file.clj:204\n    # lib.clj:60\nmv -f /var/lib/pallet/etc/sudoers.new /etc/sudoers\nfi && \\\n# file.clj:16\n    # lib.clj:144\nchown root /etc/sudoers && \\\n# file.clj:20\nchmod 0440 /etc/sudoers && \\\n(    # file.clj:27\ncp=$(readlink -f /etc/sudoers) && \\\ncd $(dirname ${cp}) && \\\n# lib.clj:193\nmd5sum $(basename ${cp})\n)>/var/lib/pallet/etc/sudoers.md5 && \\\n# remote_file.clj:212\necho MD5 sum is $(cat /var/lib/pallet/etc/sudoers.md5) && \\\n# remote_file.clj:216\n# lib.clj:114\nls -t /etc/sudoers.~[0-9]*~ 2> /dev/null | \\\n# lib.clj:128\ntail -n \"+6\" | \\\n# lib.clj:27\nxargs \\\n rm --force\n } || { echo '#> automated-admin-user: sudoers: remote-file /etc/sudoers : FAIL'; exit 1;} >&2 \necho '#> automated-admin-user: sudoers: remote-file /etc/sudoers : SUCCESS'\n"]
+192.168.56.112 automated-admin-user: sudoers: pallet.actions-impl/remote-file-action
+SSH user root :pk-path null :pk null
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script echo 'automated-admin-user: sudoers: remote-file /etc/sudoers...';
+192.168.56.112 script {
+192.168.56.112 script # remote_file.clj:75
+192.168.56.112 script set -x && \
+192.168.56.112 script # remote_file.clj:76
+192.168.56.112 script     # lib.clj:301
+192.168.56.112 script mkdir -p $(dirname /var/lib/pallet/etc/sudoers.new) && \
+192.168.56.112 script # remote_file.clj:120
+192.168.56.112 script     # lib.clj:287
+192.168.56.112 script     # lib.clj:280
+192.168.56.112 script { cat > /var/lib/pallet/etc/sudoers.new <<EOFpallet
+192.168.56.112 script root ALL = (ALL) ALL
+192.168.56.112 script %adm ALL = (ALL) ALL
+192.168.56.112 script duncan ALL = (ALL) NOPASSWD: ALL
+192.168.56.112 script EOFpallet
+192.168.56.112 script  } && \
+192.168.56.112 script # remote_file.clj:163
+192.168.56.112 script filediff= && \
+192.168.56.112 script # remote_file.clj:164
+192.168.56.112 script if [ -e /etc/sudoers ] && [ -e /var/lib/pallet/etc/sudoers ]; then
+192.168.56.112 script # remote_file.clj:166
+192.168.56.112 script     # lib.clj:133
+192.168.56.112 script diff -u /etc/sudoers /var/lib/pallet/etc/sudoers
+192.168.56.112 script     # remote_file.clj:167
+192.168.56.112 script filediff=$?
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:169
+192.168.56.112 script md5diff= && \
+192.168.56.112 script # remote_file.clj:170
+192.168.56.112 script if [ -e /var/lib/pallet/etc/sudoers ] && [ -e /var/lib/pallet/etc/sudoers.md5 ]; then
+192.168.56.112 script # remote_file.clj:172
+192.168.56.112 script     # lib.clj:218
+192.168.56.112 script ( cd $(dirname /var/lib/pallet/etc/sudoers.md5) && md5sum --status --check $(basename /var/lib/pallet/etc/sudoers.md5) )
+192.168.56.112 script     # remote_file.clj:173
+192.168.56.112 script md5diff=$?
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:175
+192.168.56.112 script contentdiff= && \
+192.168.56.112 script # remote_file.clj:176
+192.168.56.112 script if [ -e /etc/sudoers ] && [ -e /var/lib/pallet/etc/sudoers.new ]; then
+192.168.56.112 script # remote_file.clj:178
+192.168.56.112 script     # lib.clj:133
+192.168.56.112 script diff -u /etc/sudoers /var/lib/pallet/etc/sudoers.new
+192.168.56.112 script     # remote_file.clj:179
+192.168.56.112 script contentdiff=$?
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:182
+192.168.56.112 script errexit=0 && \
+192.168.56.112 script # remote_file.clj:183
+192.168.56.112 script if [ "${filediff}" == "1" ]; then
+192.168.56.112 script # remote_file.clj:185
+192.168.56.112 script echo Existing file did not match the pallet master copy: FAIL
+192.168.56.112 script     # remote_file.clj:187
+192.168.56.112 script errexit=1
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:189
+192.168.56.112 script if [ "${md5diff}" == "1" ]; then
+192.168.56.112 script # remote_file.clj:191
+192.168.56.112 script echo Existing content did not match md5: FAIL
+192.168.56.112 script     # remote_file.clj:192
+192.168.56.112 script errexit=1
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:195
+192.168.56.112 script [ "${errexit}" == "0" ] && \
+192.168.56.112 script # remote_file.clj:198
+192.168.56.112 script if ! ( [ "${contentdiff}" == "0" ] ) && [ -e /var/lib/pallet/etc/sudoers.new ]; then
+192.168.56.112 script # remote_file.clj:202
+192.168.56.112 script     # lib.clj:76
+192.168.56.112 script cp -f --backup="numbered" /var/lib/pallet/etc/sudoers.new /var/lib/pallet/etc/sudoers
+192.168.56.112 script     # remote_file.clj:204
+192.168.56.112 script     # lib.clj:60
+192.168.56.112 script mv -f /var/lib/pallet/etc/sudoers.new /etc/sudoers
+192.168.56.112 script fi && \
+192.168.56.112 script # file.clj:16
+192.168.56.112 script     # lib.clj:144
+192.168.56.112 script chown root /etc/sudoers && \
+192.168.56.112 script # file.clj:20
+192.168.56.112 script chmod 0440 /etc/sudoers && \
+192.168.56.112 script (    # file.clj:27
+192.168.56.112 script cp=$(readlink -f /etc/sudoers) && \
+192.168.56.112 script cd $(dirname ${cp}) && \
+192.168.56.112 script # lib.clj:193
+192.168.56.112 script md5sum $(basename ${cp})
+192.168.56.112 script )>/var/lib/pallet/etc/sudoers.md5 && \
+192.168.56.112 script # remote_file.clj:212
+192.168.56.112 script echo MD5 sum is $(cat /var/lib/pallet/etc/sudoers.md5) && \
+192.168.56.112 script # remote_file.clj:216
+192.168.56.112 script # lib.clj:114
+192.168.56.112 script ls -t /etc/sudoers.~[0-9]*~ 2> /dev/null | \
+192.168.56.112 script # lib.clj:128
+192.168.56.112 script tail -n "+6" | \
+192.168.56.112 script # lib.clj:27
+192.168.56.112 script xargs \
+192.168.56.112 script  rm --force
+192.168.56.112 script  } || { echo '#> automated-admin-user: sudoers: remote-file /etc/sudoers : FAIL'; exit 1;} >&2 
+192.168.56.112 script echo '#> automated-admin-user: sudoers: remote-file /etc/sudoers : SUCCESS'
+192.168.56.112 script 
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via palletc0Tg0 as root
+192.168.56.112 output => automated-admin-user: sudoers: remote-file /etc/sudoers...
+192.168.56.112 output => ++ dirname /var/lib/pallet/etc/sudoers.new
+192.168.56.112 output => + mkdir -p /var/lib/pallet/etc
+192.168.56.112 output => + cat
+192.168.56.112 output => + filediff=
+192.168.56.112 output => + '[' -e /etc/sudoers ']'
+192.168.56.112 output => + '[' -e /var/lib/pallet/etc/sudoers ']'
+192.168.56.112 output => + md5diff=
+192.168.56.112 output => + '[' -e /var/lib/pallet/etc/sudoers ']'
+192.168.56.112 output => + contentdiff=
+192.168.56.112 output => + '[' -e /etc/sudoers ']'
+192.168.56.112 output => + '[' -e /var/lib/pallet/etc/sudoers.new ']'
+192.168.56.112 output => + diff -u /etc/sudoers /var/lib/pallet/etc/sudoers.new
+192.168.56.112 output => --- /etc/sudoers	2010-01-12 08:13:11.000000000 -0500
+192.168.56.112 output => +++ /var/lib/pallet/etc/sudoers.new	2013-03-16 14:35:20.732004787 -0400
+192.168.56.112 output => @@ -1,97 +1,3 @@
+192.168.56.112 output => -## Sudoers allows particular users to run various commands as
+192.168.56.112 output => -## the root user, without needing the root password.
+192.168.56.112 output => -##
+192.168.56.112 output => -## Examples are provided at the bottom of the file for collections
+192.168.56.112 output => -## of related commands, which can then be delegated out to particular
+192.168.56.112 output => -## users or groups.
+192.168.56.112 output => -## 
+192.168.56.112 output => -## This file must be edited with the 'visudo' command.
+192.168.56.112 output => -
+192.168.56.112 output => -## Host Aliases
+192.168.56.112 output => -## Groups of machines. You may prefer to use hostnames (perhaps using 
+192.168.56.112 output => -## wildcards for entire domains) or IP addresses instead.
+192.168.56.112 output => -# Host_Alias     FILESERVERS = fs1, fs2
+192.168.56.112 output => -# Host_Alias     MAILSERVERS = smtp, smtp2
+192.168.56.112 output => -
+192.168.56.112 output => -## User Aliases
+192.168.56.112 output => -## These aren't often necessary, as you can use regular groups
+192.168.56.112 output => -## (ie, from files, LDAP, NIS, etc) in this file - just use %groupname 
+192.168.56.112 output => -## rather than USERALIAS
+192.168.56.112 output => -# User_Alias ADMINS = jsmith, mikem
+192.168.56.112 output => -
+192.168.56.112 output => -
+192.168.56.112 output => -## Command Aliases
+192.168.56.112 output => -## These are groups of related commands...
+192.168.56.112 output => -
+192.168.56.112 output => -## Networking
+192.168.56.112 output => -# Cmnd_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping, /sbin/dhclient, /usr/bin/net, /sbin/iptables, /usr/bin/rfcomm, /usr/bin/wvdial, /sbin/iwconfig, /sbin/mii-tool
+192.168.56.112 output => -
+192.168.56.112 output => -## Installation and management of software
+192.168.56.112 output => -# Cmnd_Alias SOFTWARE = /bin/rpm, /usr/bin/up2date, /usr/bin/yum
+192.168.56.112 output => -
+192.168.56.112 output => -## Services
+192.168.56.112 output => -# Cmnd_Alias SERVICES = /sbin/service, /sbin/chkconfig
+192.168.56.112 output => -
+192.168.56.112 output => -## Updating the locate database
+192.168.56.112 output => -# Cmnd_Alias LOCATE = /usr/bin/updatedb
+192.168.56.112 output => -
+192.168.56.112 output => -## Storage
+192.168.56.112 output => -# Cmnd_Alias STORAGE = /sbin/fdisk, /sbin/sfdisk, /sbin/parted, /sbin/partprobe, /bin/mount, /bin/umount
+192.168.56.112 output => -
+192.168.56.112 output => -## Delegating permissions
+192.168.56.112 output => -# Cmnd_Alias DELEGATING = /usr/sbin/visudo, /bin/chown, /bin/chmod, /bin/chgrp 
+192.168.56.112 output => -
+192.168.56.112 output => -## Processes
+192.168.56.112 output => -# Cmnd_Alias PROCESSES = /bin/nice, /bin/kill, /usr/bin/kill, /usr/bin/killall
+192.168.56.112 output => -
+192.168.56.112 output => -## Drivers
+192.168.56.112 output => -# Cmnd_Alias DRIVERS = /sbin/modprobe
+192.168.56.112 output => -
+192.168.56.112 output => -# Defaults specification
+192.168.56.112 output => -
+192.168.56.112 output => -#
+192.168.56.112 output => -# Disable "ssh hostname sudo <cmd>", because it will show the password in clear. 
+192.168.56.112 output => -#         You have to run "ssh -t hostname sudo <cmd>".
+192.168.56.112 output => -#
+192.168.56.112 output => -Defaults    requiretty
+192.168.56.112 output => -
+192.168.56.112 output => -Defaults    env_reset
+192.168.56.112 output => -Defaults    env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS_COLORS"
+192.168.56.112 output => -Defaults    env_keep += "MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"
+192.168.56.112 output => -Defaults    env_keep += "LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES"
+192.168.56.112 output => -Defaults    env_keep += "LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE"
+192.168.56.112 output => -Defaults    env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY"
+192.168.56.112 output => -
+192.168.56.112 output => -Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin
+192.168.56.112 output => -
+192.168.56.112 output => -## Next comes the main part: which users can run what software on 
+192.168.56.112 output => -## which machines (the sudoers file can be shared between multiple
+192.168.56.112 output => -## systems).
+192.168.56.112 output => -## Syntax:
+192.168.56.112 output => -##
+192.168.56.112 output => -## 	user	MACHINE=COMMANDS
+192.168.56.112 output => -##
+192.168.56.112 output => -## The COMMANDS section may have other options added to it.
+192.168.56.112 output => -##
+192.168.56.112 output => -## Allow root to run any commands anywhere 
+192.168.56.112 output => -root	ALL=(ALL) 	ALL
+192.168.56.112 output => -
+192.168.56.112 output => -## Allows members of the 'sys' group to run networking, software, 
+192.168.56.112 output => -## service management apps and more.
+192.168.56.112 output => -# %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
+192.168.56.112 output => -
+192.168.56.112 output => -## Allows people in group wheel to run all commands
+192.168.56.112 output => -# %wheel	ALL=(ALL)	ALL
+192.168.56.112 output => -
+192.168.56.112 output => -## Same thing without a password
+192.168.56.112 output => -# %wheel	ALL=(ALL)	NOPASSWD: ALL
+192.168.56.112 output => -
+192.168.56.112 output => -## Allows members of the users group to mount and unmount the 
+192.168.56.112 output => -## cdrom as root
+192.168.56.112 output => -# %users  ALL=/sbin/mount /mnt/cdrom, /sbin/umount /mnt/cdrom
+192.168.56.112 output => -
+192.168.56.112 output => -## Allows members of the users group to shutdown this system
+192.168.56.112 output => -# %users  localhost=/sbin/shutdown -h now
+192.168.56.112 output => -
+192.168.56.112 output => -## Read drop-in files from /etc/sudoers.d (the # here does not mean a comment)
+192.168.56.112 output => -#includedir /etc/sudoers.d
+192.168.56.112 output => +root ALL = (ALL) ALL
+192.168.56.112 output => +%adm ALL = (ALL) ALL
+192.168.56.112 output => +duncan ALL = (ALL) NOPASSWD: ALL
+192.168.56.112 output => + contentdiff=1
+192.168.56.112 output => + errexit=0
+192.168.56.112 output => + '[' '' == 1 ']'
+192.168.56.112 output => + '[' '' == 1 ']'
+192.168.56.112 output => + '[' 0 == 0 ']'
+192.168.56.112 output => + '[' 1 == 0 ']'
+192.168.56.112 output => + '[' -e /var/lib/pallet/etc/sudoers.new ']'
+192.168.56.112 output => + cp -f --backup=numbered /var/lib/pallet/etc/sudoers.new /var/lib/pallet/etc/sudoers
+192.168.56.112 output => + mv -f /var/lib/pallet/etc/sudoers.new /etc/sudoers
+192.168.56.112 output => + chown root /etc/sudoers
+192.168.56.112 output => + chmod 0440 /etc/sudoers
+192.168.56.112 output => ++ readlink -f /etc/sudoers
+192.168.56.112 output => + cp=/etc/sudoers
+192.168.56.112 output => ++ dirname /etc/sudoers
+192.168.56.112 output => + cd /etc
+192.168.56.112 output => ++ basename /etc/sudoers
+192.168.56.112 output => + md5sum sudoers
+192.168.56.112 output => ++ cat /var/lib/pallet/etc/sudoers.md5
+192.168.56.112 output => + echo MD5 sum is a66734b98f3e90f419735c27848f5978 sudoers
+192.168.56.112 output => MD5 sum is a66734b98f3e90f419735c27848f5978 sudoers
+192.168.56.112 output => + tail -n +6
+192.168.56.112 output => + xargs rm --force
+192.168.56.112 output => + ls -t '/etc/sudoers.~[0-9]*~'
+192.168.56.112 output => + echo '#> automated-admin-user: sudoers: remote-file /etc/sudoers : SUCCESS'
+192.168.56.112 #> automated-admin-user: sudoers: remote-file /etc/sudoers : SUCCESS
+192.168.56.112 output => + exit 0
+default-executor
+default-executor script [{:language :bash} "echo 'remote-file f...';\n{\n# remote_file.clj:75\nset -x && \\\n# remote_file.clj:76\n    # lib.clj:301\nmkdir -p $(dirname /var/lib/pallet/admin-home/duncan/f.new) && \\\n# remote_file.clj:120\n    # lib.clj:287\n    # lib.clj:280\n{ cat > /var/lib/pallet/admin-home/duncan/f.new <<EOFpallet\nhello\nEOFpallet\n } && \\\n# remote_file.clj:163\nfilediff= && \\\n# remote_file.clj:164\nif [ -e f ] && [ -e /var/lib/pallet/admin-home/duncan/f ]; then\n# remote_file.clj:166\n    # lib.clj:133\ndiff -u f /var/lib/pallet/admin-home/duncan/f\n    # remote_file.clj:167\nfilediff=$?\nfi && \\\n# remote_file.clj:169\nmd5diff= && \\\n# remote_file.clj:170\nif [ -e /var/lib/pallet/admin-home/duncan/f ] && [ -e /var/lib/pallet/admin-home/duncan/f.md5 ]; then\n# remote_file.clj:172\n    # lib.clj:218\n( cd $(dirname /var/lib/pallet/admin-home/duncan/f.md5) && md5sum --status --check $(basename /var/lib/pallet/admin-home/duncan/f.md5) )\n    # remote_file.clj:173\nmd5diff=$?\nfi && \\\n# remote_file.clj:175\ncontentdiff= && \\\n# remote_file.clj:176\nif [ -e f ] && [ -e /var/lib/pallet/admin-home/duncan/f.new ]; then\n# remote_file.clj:178\n    # lib.clj:133\ndiff -u f /var/lib/pallet/admin-home/duncan/f.new\n    # remote_file.clj:179\ncontentdiff=$?\nfi && \\\n# remote_file.clj:182\nerrexit=0 && \\\n# remote_file.clj:183\nif [ \"${filediff}\" == \"1\" ]; then\n# remote_file.clj:185\necho Existing file did not match the pallet master copy: FAIL\n    # remote_file.clj:187\nerrexit=1\nfi && \\\n# remote_file.clj:189\nif [ \"${md5diff}\" == \"1\" ]; then\n# remote_file.clj:191\necho Existing content did not match md5: FAIL\n    # remote_file.clj:192\nerrexit=1\nfi && \\\n# remote_file.clj:195\n[ \"${errexit}\" == \"0\" ] && \\\n# remote_file.clj:198\nif ! ( [ \"${contentdiff}\" == \"0\" ] ) && [ -e /var/lib/pallet/admin-home/duncan/f.new ]; then\n# remote_file.clj:202\n    # lib.clj:76\ncp -f --backup=\"numbered\" /var/lib/pallet/admin-home/duncan/f.new /var/lib/pallet/admin-home/duncan/f\n    # remote_file.clj:204\n    # lib.clj:60\nmv -f /var/lib/pallet/admin-home/duncan/f.new f\nfi && \\\n(    # file.clj:27\ncp=$(readlink -f f) && \\\ncd $(dirname ${cp}) && \\\n# lib.clj:193\nmd5sum $(basename ${cp})\n)>/var/lib/pallet/admin-home/duncan/f.md5 && \\\n# remote_file.clj:212\necho MD5 sum is $(cat /var/lib/pallet/admin-home/duncan/f.md5) && \\\n# remote_file.clj:216\n# lib.clj:114\nls -t f.~[0-9]*~ 2> /dev/null | \\\n# lib.clj:128\ntail -n \"+6\" | \\\n# lib.clj:27\nxargs \\\n rm --force\n } || { echo '#> remote-file f : FAIL'; exit 1;} >&2 \necho '#> remote-file f : SUCCESS'\n"]
+192.168.56.112  pallet.actions-impl/remote-file-action
+SSH user duncan :pk-path /Users/duncan/.ssh/id_rsa :pk null
+attempt-connect username: duncan  password: null
+SSH connecting {:server "192.168.56.112", :port 22}
+Create ssh transport state: {:server "192.168.56.112", :port 22}
+192.168.56.112 script #!/usr/bin/env bash
+192.168.56.112 script echo 'remote-file f...';
+192.168.56.112 script {
+192.168.56.112 script # remote_file.clj:75
+192.168.56.112 script set -x && \
+192.168.56.112 script # remote_file.clj:76
+192.168.56.112 script     # lib.clj:301
+192.168.56.112 script mkdir -p $(dirname /var/lib/pallet/admin-home/duncan/f.new) && \
+192.168.56.112 script # remote_file.clj:120
+192.168.56.112 script     # lib.clj:287
+192.168.56.112 script     # lib.clj:280
+192.168.56.112 script { cat > /var/lib/pallet/admin-home/duncan/f.new <<EOFpallet
+192.168.56.112 script hello
+192.168.56.112 script EOFpallet
+192.168.56.112 script  } && \
+192.168.56.112 script # remote_file.clj:163
+192.168.56.112 script filediff= && \
+192.168.56.112 script # remote_file.clj:164
+192.168.56.112 script if [ -e f ] && [ -e /var/lib/pallet/admin-home/duncan/f ]; then
+192.168.56.112 script # remote_file.clj:166
+192.168.56.112 script     # lib.clj:133
+192.168.56.112 script diff -u f /var/lib/pallet/admin-home/duncan/f
+192.168.56.112 script     # remote_file.clj:167
+192.168.56.112 script filediff=$?
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:169
+192.168.56.112 script md5diff= && \
+192.168.56.112 script # remote_file.clj:170
+192.168.56.112 script if [ -e /var/lib/pallet/admin-home/duncan/f ] && [ -e /var/lib/pallet/admin-home/duncan/f.md5 ]; then
+192.168.56.112 script # remote_file.clj:172
+192.168.56.112 script     # lib.clj:218
+192.168.56.112 script ( cd $(dirname /var/lib/pallet/admin-home/duncan/f.md5) && md5sum --status --check $(basename /var/lib/pallet/admin-home/duncan/f.md5) )
+192.168.56.112 script     # remote_file.clj:173
+192.168.56.112 script md5diff=$?
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:175
+192.168.56.112 script contentdiff= && \
+192.168.56.112 script # remote_file.clj:176
+192.168.56.112 script if [ -e f ] && [ -e /var/lib/pallet/admin-home/duncan/f.new ]; then
+192.168.56.112 script # remote_file.clj:178
+192.168.56.112 script     # lib.clj:133
+192.168.56.112 script diff -u f /var/lib/pallet/admin-home/duncan/f.new
+192.168.56.112 script     # remote_file.clj:179
+192.168.56.112 script contentdiff=$?
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:182
+192.168.56.112 script errexit=0 && \
+192.168.56.112 script # remote_file.clj:183
+192.168.56.112 script if [ "${filediff}" == "1" ]; then
+192.168.56.112 script # remote_file.clj:185
+192.168.56.112 script echo Existing file did not match the pallet master copy: FAIL
+192.168.56.112 script     # remote_file.clj:187
+192.168.56.112 script errexit=1
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:189
+192.168.56.112 script if [ "${md5diff}" == "1" ]; then
+192.168.56.112 script # remote_file.clj:191
+192.168.56.112 script echo Existing content did not match md5: FAIL
+192.168.56.112 script     # remote_file.clj:192
+192.168.56.112 script errexit=1
+192.168.56.112 script fi && \
+192.168.56.112 script # remote_file.clj:195
+192.168.56.112 script [ "${errexit}" == "0" ] && \
+192.168.56.112 script # remote_file.clj:198
+192.168.56.112 script if ! ( [ "${contentdiff}" == "0" ] ) && [ -e /var/lib/pallet/admin-home/duncan/f.new ]; then
+192.168.56.112 script # remote_file.clj:202
+192.168.56.112 script     # lib.clj:76
+192.168.56.112 script cp -f --backup="numbered" /var/lib/pallet/admin-home/duncan/f.new /var/lib/pallet/admin-home/duncan/f
+192.168.56.112 script     # remote_file.clj:204
+192.168.56.112 script     # lib.clj:60
+192.168.56.112 script mv -f /var/lib/pallet/admin-home/duncan/f.new f
+192.168.56.112 script fi && \
+192.168.56.112 script (    # file.clj:27
+192.168.56.112 script cp=$(readlink -f f) && \
+192.168.56.112 script cd $(dirname ${cp}) && \
+192.168.56.112 script # lib.clj:193
+192.168.56.112 script md5sum $(basename ${cp})
+192.168.56.112 script )>/var/lib/pallet/admin-home/duncan/f.md5 && \
+192.168.56.112 script # remote_file.clj:212
+192.168.56.112 script echo MD5 sum is $(cat /var/lib/pallet/admin-home/duncan/f.md5) && \
+192.168.56.112 script # remote_file.clj:216
+192.168.56.112 script # lib.clj:114
+192.168.56.112 script ls -t f.~[0-9]*~ 2> /dev/null | \
+192.168.56.112 script # lib.clj:128
+192.168.56.112 script tail -n "+6" | \
+192.168.56.112 script # lib.clj:27
+192.168.56.112 script xargs \
+192.168.56.112 script  rm --force
+192.168.56.112 script  } || { echo '#> remote-file f : FAIL'; exit 1;} >&2 
+192.168.56.112 script echo '#> remote-file f : SUCCESS'
+192.168.56.112 script 
+192.168.56.112 script exit $?
+{:server "192.168.56.112", :port 22} send script via palletTvedf as root
+192.168.56.112 output => remote-file f...
+192.168.56.112 output => ++ dirname /var/lib/pallet/admin-home/duncan/f.new
+192.168.56.112 output => + mkdir -p /var/lib/pallet/admin-home/duncan
+192.168.56.112 output => + cat
+192.168.56.112 output => + filediff=
+192.168.56.112 output => + '[' -e f ']'
+192.168.56.112 output => + md5diff=
+192.168.56.112 output => + '[' -e /var/lib/pallet/admin-home/duncan/f ']'
+192.168.56.112 output => + contentdiff=
+192.168.56.112 output => + '[' -e f ']'
+192.168.56.112 output => + errexit=0
+192.168.56.112 output => + '[' '' == 1 ']'
+192.168.56.112 output => + '[' '' == 1 ']'
+192.168.56.112 output => + '[' 0 == 0 ']'
+192.168.56.112 output => + '[' '' == 0 ']'
+192.168.56.112 output => + '[' -e /var/lib/pallet/admin-home/duncan/f.new ']'
+192.168.56.112 output => + cp -f --backup=numbered /var/lib/pallet/admin-home/duncan/f.new /var/lib/pallet/admin-home/duncan/f
+192.168.56.112 output => + mv -f /var/lib/pallet/admin-home/duncan/f.new f
+192.168.56.112 output => ++ readlink -f f
+192.168.56.112 output => + cp=/home/duncan/f
+192.168.56.112 output => ++ dirname /home/duncan/f
+192.168.56.112 output => + cd /home/duncan
+192.168.56.112 output => ++ basename /home/duncan/f
+192.168.56.112 output => + md5sum f
+192.168.56.112 output => ++ cat /var/lib/pallet/admin-home/duncan/f.md5
+192.168.56.112 output => + echo MD5 sum is b1946ac92492d2347c6235b4d2611184 f
+192.168.56.112 output => MD5 sum is b1946ac92492d2347c6235b4d2611184 f
+192.168.56.112 output => + tail -n +6
+192.168.56.112 output => + xargs rm --force
+192.168.56.112 output => + ls -t 'f.~[0-9]*~'
+192.168.56.112 output => + echo '#> remote-file f : SUCCESS'
+192.168.56.112 #> remote-file f : SUCCESS
+192.168.56.112 output => + exit 0

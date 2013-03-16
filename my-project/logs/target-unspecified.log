@@ -1,0 +1,185 @@
+pallet-task options {:project-options "{:compile-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/classes\", :group \"my-project\", :license {:name \"Eclipse Public License\", :url \"http://www.eclipse.org/legal/epl-v10.html\"}, :checkout-deps-shares [:source-paths :resource-paths :compile-path], :dependencies ([org.clojure/clojure \"1.5.0\"] [com.palletops/pallet \"0.8.0-beta.5\"] [org.cloudhoist/pallet-vmfest \"0.3.0-alpha.2\"] [org.clojars.tbatchelli/vboxjxpcom \"4.2.4\"] [com.palletops/pallet-lein \"0.6.0-beta.7\"] [ch.qos.logback/logback-classic \"1.0.9\"]), :plugin-repositories [[\"central\" {:snapshots false, :url \"http://repo1.maven.org/maven2/\"}] [\"clojars\" {:url \"https://clojars.org/repo/\"}]], :test-selectors {:default (constantly true)}, :middleware [], :target-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target\", :name \"my-project\", :deploy-repositories ([\"clojars\" {:creds :gpg, :username :gpg, :url \"https://clojars.org/repo/\", :password :gpg}]), :root \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project\", :offline? false, :source-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/src\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/src\"), :certificates [\"clojars.pem\"], :version \"0.1.0-SNAPSHOT\", :jar-exclusions [#\"^\\.\"], :prep-tasks [\"javac\" \"compile\"], :url \"http://example.com/FIXME\", :resource-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/resources\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/dev-resources\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/resources\"), :uberjar-exclusions [#\"(?i)^META-INF/[^/]*\\.(SF|RSA|DSA)$\"], :jvm-opts (\"-XX:+TieredCompilation\" \"-XX:TieredStopAtLevel=1\" \"-Djava.awt.headless=false\" \"-Dfile.encoding=UTF-8\" \"-XX:MaxPermSize=512m\" \"-Xmx1024m\" \"-XX:+UseConcMarkSweepGC\" \"-XX:+CMSClassUnloadingEnabled\" \"-XX:+TieredCompilation\"), :eval-in :subprocess, :plugins ([com.palletops/pallet-lein \"0.6.0-beta.7\"] [lein-ritz/lein-ritz \"0.7.1-SNAPSHOT\"] [com.palletops/lein-pallet-crate \"0.1.0-SNAPSHOT\"] [lein-sub/lein-sub \"0.2.2\"] [lein-set-version/lein-set-version \"0.3.0\"] [lein-pprint/lein-pprint \"1.1.1\"] [lein-kibit/lein-kibit \"0.0.7\"] [lein-outdated/lein-outdated \"1.0.0\"] [lein-marginalia/lein-marginalia \"0.7.1\"] [lein-dist/lein-dist \"0.1.0\"] [perforate/perforate \"0.2.5-SNAPSHOT\"] [codox/codox.leiningen \"0.6.4\"] [codox-md/codox-md \"0.1.0\"]), :native-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/native\", :description \"FIXME: write description\", :test-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/test\"), :aliases {\"trepl\" [\"trampoline\" \"run\" \"-m\" \"clojure.main/main\"]}}"}
+compute-service-properties service: [:vb4] available: (:vb :vbox :voxel :localhost :vb4 :rackspace :ci :nl :emi-la :storm :ec2 :gogrid-public :jclouds-vb :slicehost :awssdk :live-test :combined :bluelock :emi-vb :la :bluelock-zone01 :vbtoni :gogrid-internal :rackspacedev :aws :la-rs)
+compute-service-properties service: :vbox available: (:localhost :vbox)
+The vbox.home system property guessed as /Applications/VirtualBox.app/Contents/MacOS
+Loading images from /Users/duncan/.vmfest/models
+Loaded images (:ubuntu-10-10-64bit-server :precise64 :lucid32 :debian-6.0.2.1-64bit-v0.3 :CentOS53-32-large :ubuntu-12-04-64bit-server :ubuntu-11-10-64bit-server :fedora-14-64bit-server)
+No :default-bridged-interface defined. Will chose from these options: en0: Wi-Fi (AirPort)
+No Local Interface defined. Using vboxnet0
+Loaded images: (:fedora-14-64bit-server :ubuntu-11-10-64bit-server :ubuntu-12-04-64bit-server :CentOS53-32-large :debian-6.0.2.1-64bit-v0.3 :lucid32 :precise64 :ubuntu-10-10-64bit-server)
+Using 'local' networking via interface 'vboxnet0' as defaults for new machines
+loaded model :micro = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 512}
+loaded model :small = {:cpu-count 1, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 1024}
+loaded model :medium = {:cpu-count 2, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 2048}
+loaded model :large = {:cpu-count 4, :storage [{:devices [nil nil nil nil], :name "IDE Controller", :bus :ide}], :boot-mount-point ["IDE Controller" 0], :memory-size 4096}
+compute-service-properties service: null available: (:vb :vbox :voxel :localhost :vb4 :rackspace :ci :nl :emi-la :storm :ec2 :gogrid-public :jclouds-vb :slicehost :awssdk :live-test :combined :bluelock :emi-vb :la :bluelock-zone01 :vbtoni :gogrid-internal :rackspacedev :aws :la-rs)
+OS              Mac OS X 10.7.5
+Arch            x86_64
+Admin user      duncan
+private-key-path /Users/duncan/.ssh/id_rsa true
+public-key-path /Users/duncan/.ssh/id_rsa.pub true
+classpath: /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/test
+classpath: /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/src
+classpath: /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/src
+classpath: /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/resources
+classpath: /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/dev-resources
+classpath: /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/resources
+classpath: /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/classes
+classpath: /Users/duncan/.m2/repository/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar
+classpath: /Users/duncan/.m2/repository/org/clojars/tbatchelli/vboxjxpcom/4.2.4/vboxjxpcom-4.2.4.jar
+classpath: /Users/duncan/.m2/repository/enlive/enlive/1.0.1/enlive-1.0.1.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/chiba/0.2.0/chiba-0.2.0.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/pallet/0.8.0-beta.5/pallet-0.8.0-beta.5.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/stevedore/0.8.0-beta.2/stevedore-0.8.0-beta.2.jar
+classpath: /Users/duncan/.m2/repository/vmfest/vmfest/0.3.0-alpha.2/vmfest-0.3.0-alpha.2.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/pallet-common/0.4.0/pallet-common-0.4.0.jar
+classpath: /Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.usocket-jna/0.0.5/jsch.agentproxy.usocket-jna-0.0.5.jar
+classpath: /Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.pageant/0.0.5/jsch.agentproxy.pageant-0.0.5.jar
+classpath: /Users/duncan/.m2/repository/com/jcraft/jsch/0.1.49/jsch-0.1.49.jar
+classpath: /Users/duncan/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar
+classpath: /Users/duncan/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/core.incubator/0.1.0/core.incubator-0.1.0.jar
+classpath: /Users/duncan/.m2/repository/pallet-fsm/pallet-fsm/0.2.0/pallet-fsm-0.2.0.jar
+classpath: /Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.core/0.0.5/jsch.agentproxy.core-0.0.5.jar
+classpath: /Users/duncan/.m2/repository/pallet-fsmop/pallet-fsmop/0.2.5/pallet-fsmop-0.2.5.jar
+classpath: /Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.sshagent/0.0.5/jsch.agentproxy.sshagent-0.0.5.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/tools.logging/0.2.0/tools.logging-0.2.0.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/thread-expr/1.3.0/thread-expr-1.3.0.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/tools.macro/0.1.1/tools.macro-0.1.1.jar
+classpath: /Users/duncan/.m2/repository/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar
+classpath: /Users/duncan/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar
+classpath: /Users/duncan/.m2/repository/slingshot/slingshot/0.10.3/slingshot-0.10.3.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/local-transport/0.4.0/local-transport-0.4.0.jar
+classpath: /Users/duncan/.m2/repository/clj-ssh/clj-ssh/0.5.3/clj-ssh-0.5.3.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/algo.monads/0.1.0/algo.monads-0.1.0.jar
+classpath: /Users/duncan/.m2/repository/pallet-map-merge/pallet-map-merge/0.1.0/pallet-map-merge-0.1.0.jar
+classpath: /Users/duncan/.m2/repository/ch/qos/logback/logback-classic/1.0.9/logback-classic-1.0.9.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/clojure/1.5.0/clojure-1.5.0.jar
+classpath: /Users/duncan/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar
+classpath: /Users/duncan/.m2/repository/bultitude/bultitude/0.1.3/bultitude-0.1.3.jar
+classpath: /Users/duncan/.m2/repository/fs/fs/1.0.0/fs-1.0.0.jar
+classpath: /Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.usocket-nc/0.0.5/jsch.agentproxy.usocket-nc-0.0.5.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/ssh-transport/0.4.0/ssh-transport-0.4.0.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/script-exec/0.3.0/script-exec-0.3.0.jar
+classpath: /Users/duncan/.m2/repository/com/palletops/pallet-lein/0.6.0-beta.7/pallet-lein-0.6.0-beta.7.jar
+classpath: /Users/duncan/.m2/repository/useful/useful/0.8.6/useful-0.8.6.jar
+classpath: /Users/duncan/.m2/repository/ch/qos/logback/logback-core/1.0.9/logback-core-1.0.9.jar
+classpath: /Users/duncan/.m2/repository/pallet-thread/pallet-thread/0.1.0/pallet-thread-0.1.0.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/tools.cli/0.2.2/tools.cli-0.2.2.jar
+classpath: /Users/duncan/.m2/repository/org/tukaani/xz/1.0/xz-1.0.jar
+classpath: /Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.jsch/0.0.5/jsch.agentproxy.jsch-0.0.5.jar
+classpath: /Users/duncan/.m2/repository/org/cloudhoist/pallet-vmfest/0.3.0-alpha.2/pallet-vmfest-0.3.0-alpha.2.jar
+classpath: /Users/duncan/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0-sources.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/core.incubator/0.1.0/core.incubator-0.1.0-sources.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/tools.logging/0.2.0/tools.logging-0.2.0-sources.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/tools.macro/0.1.1/tools.macro-0.1.1-sources.jar
+classpath: /Users/duncan/.m2/repository/net/java/dev/jna/platform/3.4.0/platform-3.4.0-sources.jar
+classpath: /Users/duncan/.m2/repository/org/clojure/algo.monads/0.1.0/algo.monads-0.1.0-sources.jar
+classpath: /Users/duncan/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar
+classpath: /Users/duncan/.m2/repository/org/cloudhoist/pallet-vmfest/0.3.0-alpha.2/pallet-vmfest-0.3.0-alpha.2-sources.jar
+classpath: /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/lib/tools.jar
+classpath: /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/lib/sa-jdi.jar
+classpath: /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+classpath: /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/ext/localedata.jar
+classpath: /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/ext/sunec.jar
+classpath: /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+classpath: /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+classpath: /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+classpath: /System/Library/Java/Extensions/AppleScriptEngine.jar
+classpath: /System/Library/Java/Extensions/dns_sd.jar
+classpath: /System/Library/Java/Extensions/j3daudio.jar
+classpath: /System/Library/Java/Extensions/j3dcore.jar
+classpath: /System/Library/Java/Extensions/j3dutils.jar
+classpath: /System/Library/Java/Extensions/jai_codec.jar
+classpath: /System/Library/Java/Extensions/jai_core.jar
+classpath: /System/Library/Java/Extensions/libAppleScriptEngine.jnilib
+classpath: /System/Library/Java/Extensions/libJ3D.jnilib
+classpath: /System/Library/Java/Extensions/libJ3DAudio.jnilib
+classpath: /System/Library/Java/Extensions/libJ3DUtils.jnilib
+classpath: /System/Library/Java/Extensions/libmlib_jai.jnilib
+classpath: /System/Library/Java/Extensions/libQTJNative.jnilib
+classpath: /System/Library/Java/Extensions/mlibwrapper_jai.jar
+classpath: /System/Library/Java/Extensions/MRJToolkit.jar
+classpath: /System/Library/Java/Extensions/QTJava.zip
+classpath: /System/Library/Java/Extensions/vecmath.jar
+classpath: /usr/lib/java/libjdns_sd.jnilib
+property: java.runtime.name Java(TM) SE Runtime Environment
+property: sun.boot.library.path /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib
+property: java.vm.version 23.7-b01
+property: user.country.format CA
+property: gopherProxySet false
+property: java.vm.vendor Oracle Corporation
+property: java.vendor.url http://java.oracle.com/
+property: path.separator :
+property: java.vm.name Java HotSpot(TM) 64-Bit Server VM
+property: file.encoding.pkg sun.io
+property: user.country US
+property: sun.java.launcher SUN_STANDARD
+property: sun.os.patch.level unknown
+property: java.vm.specification.name Java Virtual Machine Specification
+property: user.dir /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project
+property: java.runtime.version 1.7.0_15-b03
+property: java.awt.graphicsenv sun.awt.CGraphicsEnvironment
+property: java.endorsed.dirs /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/endorsed
+property: os.arch x86_64
+property: clojure.debug false
+property: java.io.tmpdir /var/folders/__/6ytkmwfs70g3tqg8vd9k0mbm0000gn/T/
+property: line.separator 
+
+property: java.vm.specification.vendor Oracle Corporation
+property: os.name Mac OS X
+property: sun.jnu.encoding US-ASCII
+property: java.library.path /Users/duncan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+property: java.specification.name Java Platform API Specification
+property: java.class.version 51.0
+property: sun.management.compiler HotSpot 64-Bit Tiered Compilers
+property: my-project.version 0.1.0-SNAPSHOT
+property: os.version 10.7.5
+property: clojure.compile.path /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/classes
+property: http.nonProxyHosts local|*.local|169.254/16|*.169.254/16
+property: user.home /Users/duncan
+property: user.timezone America/Montreal
+property: java.awt.printerjob sun.lwawt.macosx.CPrinterJob
+property: file.encoding UTF-8
+property: java.specification.version 1.7
+property: java.class.path /Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/test:/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/src:/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/src:/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/resources:/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/dev-resources:/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/resources:/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/classes:/Users/duncan/.m2/repository/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar:/Users/duncan/.m2/repository/org/clojars/tbatchelli/vboxjxpcom/4.2.4/vboxjxpcom-4.2.4.jar:/Users/duncan/.m2/repository/enlive/enlive/1.0.1/enlive-1.0.1.jar:/Users/duncan/.m2/repository/com/palletops/chiba/0.2.0/chiba-0.2.0.jar:/Users/duncan/.m2/repository/com/palletops/pallet/0.8.0-beta.5/pallet-0.8.0-beta.5.jar:/Users/duncan/.m2/repository/com/palletops/stevedore/0.8.0-beta.2/stevedore-0.8.0-beta.2.jar:/Users/duncan/.m2/repository/vmfest/vmfest/0.3.0-alpha.2/vmfest-0.3.0-alpha.2.jar:/Users/duncan/.m2/repository/com/palletops/pallet-common/0.4.0/pallet-common-0.4.0.jar:/Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.usocket-jna/0.0.5/jsch.agentproxy.usocket-jna-0.0.5.jar:/Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.pageant/0.0.5/jsch.agentproxy.pageant-0.0.5.jar:/Users/duncan/.m2/repository/com/jcraft/jsch/0.1.49/jsch-0.1.49.jar:/Users/duncan/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar:/Users/duncan/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar:/Users/duncan/.m2/repository/org/clojure/core.incubator/0.1.0/core.incubator-0.1.0.jar:/Users/duncan/.m2/repository/pallet-fsm/pallet-fsm/0.2.0/pallet-fsm-0.2.0.jar:/Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.core/0.0.5/jsch.agentproxy.core-0.0.5.jar:/Users/duncan/.m2/repository/pallet-fsmop/pallet-fsmop/0.2.5/pallet-fsmop-0.2.5.jar:/Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.sshagent/0.0.5/jsch.agentproxy.sshagent-0.0.5.jar:/Users/duncan/.m2/repository/org/clojure/tools.logging/0.2.0/tools.logging-0.2.0.jar:/Users/duncan/.m2/repository/com/palletops/thread-expr/1.3.0/thread-expr-1.3.0.jar:/Users/duncan/.m2/repository/org/clojure/tools.macro/0.1.1/tools.macro-0.1.1.jar:/Users/duncan/.m2/repository/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar:/Users/duncan/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar:/Users/duncan/.m2/repository/slingshot/slingshot/0.10.3/slingshot-0.10.3.jar:/Users/duncan/.m2/repository/com/palletops/local-transport/0.4.0/local-transport-0.4.0.jar:/Users/duncan/.m2/repository/clj-ssh/clj-ssh/0.5.3/clj-ssh-0.5.3.jar:/Users/duncan/.m2/repository/org/clojure/algo.monads/0.1.0/algo.monads-0.1.0.jar:/Users/duncan/.m2/repository/pallet-map-merge/pallet-map-merge/0.1.0/pallet-map-merge-0.1.0.jar:/Users/duncan/.m2/repository/ch/qos/logback/logback-classic/1.0.9/logback-classic-1.0.9.jar:/Users/duncan/.m2/repository/org/clojure/clojure/1.5.0/clojure-1.5.0.jar:/Users/duncan/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar:/Users/duncan/.m2/repository/bultitude/bultitude/0.1.3/bultitude-0.1.3.jar:/Users/duncan/.m2/repository/fs/fs/1.0.0/fs-1.0.0.jar:/Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.usocket-nc/0.0.5/jsch.agentproxy.usocket-nc-0.0.5.jar:/Users/duncan/.m2/repository/com/palletops/ssh-transport/0.4.0/ssh-transport-0.4.0.jar:/Users/duncan/.m2/repository/com/palletops/script-exec/0.3.0/script-exec-0.3.0.jar:/Users/duncan/.m2/repository/com/palletops/pallet-lein/0.6.0-beta.7/pallet-lein-0.6.0-beta.7.jar:/Users/duncan/.m2/repository/useful/useful/0.8.6/useful-0.8.6.jar:/Users/duncan/.m2/repository/ch/qos/logback/logback-core/1.0.9/logback-core-1.0.9.jar:/Users/duncan/.m2/repository/pallet-thread/pallet-thread/0.1.0/pallet-thread-0.1.0.jar:/Users/duncan/.m2/repository/org/clojure/tools.cli/0.2.2/tools.cli-0.2.2.jar:/Users/duncan/.m2/repository/org/tukaani/xz/1.0/xz-1.0.jar:/Users/duncan/.m2/repository/com/jcraft/jsch.agentproxy.jsch/0.0.5/jsch.agentproxy.jsch-0.0.5.jar:/Users/duncan/.m2/repository/org/cloudhoist/pallet-vmfest/0.3.0-alpha.2/pallet-vmfest-0.3.0-alpha.2.jar:/Users/duncan/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0-sources.jar:/Users/duncan/.m2/repository/org/clojure/core.incubator/0.1.0/core.incubator-0.1.0-sources.jar:/Users/duncan/.m2/repository/org/clojure/tools.logging/0.2.0/tools.logging-0.2.0-sources.jar:/Users/duncan/.m2/repository/org/clojure/tools.macro/0.1.1/tools.macro-0.1.1-sources.jar:/Users/duncan/.m2/repository/net/java/dev/jna/platform/3.4.0/platform-3.4.0-sources.jar:/Users/duncan/.m2/repository/org/clojure/algo.monads/0.1.0/algo.monads-0.1.0-sources.jar:/Users/duncan/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar:/Users/duncan/.m2/repository/org/cloudhoist/pallet-vmfest/0.3.0-alpha.2/pallet-vmfest-0.3.0-alpha.2-sources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/lib/tools.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/lib/sa-jdi.jar
+property: user.name duncan
+property: java.vm.specification.version 1.7
+property: sun.java.command clojure.main -e (do nil (set! *warn-on-reflection* nil) (do (clojure.core/if-let [rv__2520__auto__ (try (clojure.core/require (quote pallet.main)) (catch java.io.FileNotFoundException e__2521__auto__ (clojure.core/binding [clojure.core/*out* clojure.core/*err*] (clojure.core/println "Error loading pallet: " (.getMessage e__2521__auto__)) (clojure.core/println (clojure.core/str "You need to have pallet as a project" " dependency."))) (throw (clojure.core/ex-info "Pallet not found as a dependency" {:exit-code 1}) e__2521__auto__)))] rv__2520__auto__ (clojure.core/if-let [m__2522__auto__ (clojure.core/ns-resolve (clojure.core/the-ns (quote pallet.main)) (quote pallet-task))] (try (clojure.core/let [env__2523__auto__ (:pallet/environment (clojure.core/read-string "{:compile-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/classes\", :group \"my-project\", :license {:name \"Eclipse Public License\", :url \"http://www.eclipse.org/legal/epl-v10.html\"}, :checkout-deps-shares [:source-paths :resource-paths :compile-path], :dependencies ([org.clojure/clojure \"1.5.0\"] [com.palletops/pallet \"0.8.0-beta.5\"] [org.cloudhoist/pallet-vmfest \"0.3.0-alpha.2\"] [org.clojars.tbatchelli/vboxjxpcom \"4.2.4\"] [com.palletops/pallet-lein \"0.6.0-beta.7\"] [ch.qos.logback/logback-classic \"1.0.9\"]), :plugin-repositories [[\"central\" {:snapshots false, :url \"http://repo1.maven.org/maven2/\"}] [\"clojars\" {:url \"https://clojars.org/repo/\"}]], :test-selectors {:default (constantly true)}, :middleware [], :target-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target\", :name \"my-project\", :deploy-repositories ([\"clojars\" {:creds :gpg, :username :gpg, :url \"https://clojars.org/repo/\", :password :gpg}]), :root \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project\", :offline? false, :source-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/src\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/src\"), :certificates [\"clojars.pem\"], :version \"0.1.0-SNAPSHOT\", :jar-exclusions [#\"^\\.\"], :prep-tasks [\"javac\" \"compile\"], :url \"http://example.com/FIXME\", :resource-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/resources\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/dev-resources\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/resources\"), :uberjar-exclusions [#\"(?i)^META-INF/[^/]*\\.(SF|RSA|DSA)$\"], :jvm-opts (\"-XX:+TieredCompilation\" \"-XX:TieredStopAtLevel=1\" \"-Djava.awt.headless=false\" \"-Dfile.encoding=UTF-8\" \"-XX:MaxPermSize=512m\" \"-Xmx1024m\" \"-XX:+UseConcMarkSweepGC\" \"-XX:+CMSClassUnloadingEnabled\" \"-XX:+TieredCompilation\"), :eval-in :subprocess, :plugins ([com.palletops/pallet-lein \"0.6.0-beta.7\"] [lein-ritz/lein-ritz \"0.7.1-SNAPSHOT\"] [com.palletops/lein-pallet-crate \"0.1.0-SNAPSHOT\"] [lein-sub/lein-sub \"0.2.2\"] [lein-set-version/lein-set-version \"0.3.0\"] [lein-pprint/lein-pprint \"1.1.1\"] [lein-kibit/lein-kibit \"0.0.7\"] [lein-outdated/lein-outdated \"1.0.0\"] [lein-marginalia/lein-marginalia \"0.7.1\"] [lein-dist/lein-dist \"0.1.0\"] [perforate/perforate \"0.2.5-SNAPSHOT\"] [codox/codox.leiningen \"0.6.4\"] [codox-md/codox-md \"0.1.0\"]), :native-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/native\", :description \"FIXME: write description\", :test-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/test\"), :aliases {\"trepl\" [\"trampoline\" \"run\" \"-m\" \"clojure.main/main\"]}}")) s__2524__auto__ (clojure.core/ns-resolve (clojure.core/the-ns (quote pallet.main)) (quote add-service))] (clojure.core/when s__2524__auto__ (s__2524__auto__ :vbox {:provider :vmfest}) (s__2524__auto__ :localhost {:provider :localhost})) (m__2522__auto__ (clojure.core/concat ["--project-options" "{:compile-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/classes\", :group \"my-project\", :license {:name \"Eclipse Public License\", :url \"http://www.eclipse.org/legal/epl-v10.html\"}, :checkout-deps-shares [:source-paths :resource-paths :compile-path], :dependencies ([org.clojure/clojure \"1.5.0\"] [com.palletops/pallet \"0.8.0-beta.5\"] [org.cloudhoist/pallet-vmfest \"0.3.0-alpha.2\"] [org.clojars.tbatchelli/vboxjxpcom \"4.2.4\"] [com.palletops/pallet-lein \"0.6.0-beta.7\"] [ch.qos.logback/logback-classic \"1.0.9\"]), :plugin-repositories [[\"central\" {:snapshots false, :url \"http://repo1.maven.org/maven2/\"}] [\"clojars\" {:url \"https://clojars.org/repo/\"}]], :test-selectors {:default (constantly true)}, :middleware [], :target-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target\", :name \"my-project\", :deploy-repositories ([\"clojars\" {:creds :gpg, :username :gpg, :url \"https://clojars.org/repo/\", :password :gpg}]), :root \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project\", :offline? false, :source-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/src\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/src\"), :certificates [\"clojars.pem\"], :version \"0.1.0-SNAPSHOT\", :jar-exclusions [#\"^\\.\"], :prep-tasks [\"javac\" \"compile\"], :url \"http://example.com/FIXME\", :resource-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/pallet/resources\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/dev-resources\" \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/resources\"), :uberjar-exclusions [#\"(?i)^META-INF/[^/]*\\.(SF|RSA|DSA)$\"], :jvm-opts (\"-XX:+TieredCompilation\" \"-XX:TieredStopAtLevel=1\" \"-Djava.awt.headless=false\" \"-Dfile.encoding=UTF-8\" \"-XX:MaxPermSize=512m\" \"-Xmx1024m\" \"-XX:+UseConcMarkSweepGC\" \"-XX:+CMSClassUnloadingEnabled\" \"-XX:+TieredCompilation\"), :eval-in :subprocess, :plugins ([com.palletops/pallet-lein \"0.6.0-beta.7\"] [lein-ritz/lein-ritz \"0.7.1-SNAPSHOT\"] [com.palletops/lein-pallet-crate \"0.1.0-SNAPSHOT\"] [lein-sub/lein-sub \"0.2.2\"] [lein-set-version/lein-set-version \"0.3.0\"] [lein-pprint/lein-pprint \"1.1.1\"] [lein-kibit/lein-kibit \"0.0.7\"] [lein-outdated/lein-outdated \"1.0.0\"] [lein-marginalia/lein-marginalia \"0.7.1\"] [lein-dist/lein-dist \"0.1.0\"] [perforate/perforate \"0.2.5-SNAPSHOT\"] [codox/codox.leiningen \"0.6.4\"] [codox-md/codox-md \"0.1.0\"]), :native-path \"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/target/native\", :description \"FIXME: write description\", :test-paths (\"/Users/duncan/projects/palletops/presentations/pallet-prj-cw2013/my-project/test\"), :aliases {\"trepl\" [\"trampoline\" \"run\" \"-m\" \"clojure.main/main\"]}}"] ["down"]) :environment env__2523__auto__)) (finally (clojure.core/shutdown-agents))) (do (clojure.core/binding [clojure.core/*out* clojure.core/*err*] (clojure.core/println "failed to resolve pallet.main/pallet-task")))))))
+property: java.home /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre
+property: sun.arch.data.model 64
+property: user.language en
+property: java.specification.vendor Oracle Corporation
+property: vbox.home /Applications/VirtualBox.app/Contents/MacOS
+property: awt.toolkit sun.lwawt.macosx.LWCToolkit
+property: java.vm.info mixed mode
+property: java.version 1.7.0_15
+property: java.ext.dirs /Users/duncan/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+property: sun.boot.class.path /Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/jre/classes
+property: java.awt.headless false
+property: java.vendor Oracle Corporation
+property: file.separator /
+property: java.vendor.url.bug http://bugreport.sun.com/bugreport/
+property: sun.io.unicode.encoding UnicodeBig
+property: sun.cpu.endian little
+property: socksNonProxyHosts local|*.local|169.254/16|*.169.254/16
+property: ftp.nonProxyHosts local|*.local|169.254/16|*.169.254/16
+property: sun.cpu.isalist 
+Filtering groups with group-names : #{}
+Filtering roles with #{}
+spec-from-project for selectors #{:default} found 1 variants
+spec-from-project groups [:myproject]
+converge :phase [:configure] :groups [:myproject] :settings-groups [:myproject]
+build-and-execute-phase :destroy-server on 1 target(s)
+remove-group-nodes {{:environment nil, :count 0, :group-name :myproject, :phases {:bootstrap #<loader$add_default_phases$fn__15301$fn__15303 pallet.project.loader$add_default_phases$fn__15301$fn__15303@f105b77>, :configure #<load$eval15360$fn__15362 pallet.project.load$eval15360$fn__15362@4a9452be>}} {:nodes ({:phases {:bootstrap #<loader$add_default_phases$fn__15301$fn__15303 pallet.project.loader$add_default_phases$fn__15301$fn__15303@f105b77>, :configure #<load$eval15360$fn__15362 pallet.project.load$eval15360$fn__15362@4a9452be>}, :group-name :myproject, :count 0, :environment nil, :group-names #{:myproject}, :node    myproject-0	      myproject	 public: 192.168.56.112}), :all true}}
+remove-nodes {:nodes ({:phases {:bootstrap #<loader$add_default_phases$fn__15301$fn__15303 pallet.project.loader$add_default_phases$fn__15301$fn__15303@f105b77>, :configure #<load$eval15360$fn__15362 pallet.project.load$eval15360$fn__15362@4a9452be>}, :group-name :myproject, :count 0, :environment nil, :group-names #{:myproject}, :node    myproject-0	      myproject	 public: 192.168.56.112}), :all true}
+remove-nodes
+Machine state is :powered-off
+build-and-execute-phase :destroy-group on 1 target(s)
+build-and-execute-phase :create-group on 0 target(s)
+create-group-nodes pallet.compute.vmfest.VmfestService@5de1f6c1 {:compute #<VmfestService pallet.compute.vmfest.VmfestService@5de1f6c1>, :blobstore nil, :user #pallet.core.user.User{:username "duncan", :public-key-path "/Users/duncan/.ssh/id_rsa.pub", :private-key-path "/Users/duncan/.ssh/id_rsa", :public-key nil, :private-key nil, :passphrase nil, :password nil, :sudo-password nil, :no-sudo nil, :sudo-user nil}} {}
+build-and-execute-phase :settings on 0 target(s)
+execute-on-unflagged state-flag :bootstrapped
+execute-phase-with-image-user on 0 target(s)
+build-and-execute-phase :bootstrap on 0 target(s)
+build-and-execute-phase :configure on 0 target(s)

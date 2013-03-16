@@ -1,0 +1,218 @@
+2013-03-16 14:34:17,011 INFO [clojure-agent-send-off-pool-0] v.v.virtualbox create-machine: Creating machine myproject-0 in /Users/duncan/.vmfest/nodes/vmfest/myproject-0/myproject-0.vbox,  overwriting previous contents
+2013-03-16 14:34:17,038 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config Configuring network for machine myproject-0 with [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}]
+2013-03-16 14:34:17,047 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config Configuring adapter 0 with {:attachment-type :host-only, :host-only-interface "vboxnet0"}
+2013-03-16 14:34:17,048 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config configure-adapter: Configuring network adapter for machine 'myproject-0' slot 0 with {:attachment-type :host-only, :host-only-interface "vboxnet0"}
+2013-03-16 14:34:17,087 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config Configuring adapter 1 with {:attachment-type :nat}
+2013-03-16 14:34:17,088 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config configure-adapter: Configuring network adapter for machine 'myproject-0' slot 1 with {:attachment-type :nat}
+2013-03-16 14:34:17,132 DEBUG [clojure-agent-send-off-pool-0] v.manager Configuring storage for {:cpu-count 1, :network [{:attachment-type :host-only, :host-only-interface "vboxnet0"} {:attachment-type :nat}], :storage ({:name "SATA Controller", :bus :sata, :devices [{:device-type :hard-disk, :location "/Users/duncan/.vmfest/models/Fedora14.vdi", :attachment-type :multi-attach} nil nil nil]}), :boot-mount-point ["SATA Controller" 0], :memory-size 512}
+2013-03-16 14:34:17,163 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:17,201 WARN [clojure-agent-send-off-pool-0] v.manager ensure-image-is-registered: /Users/duncan/.vmfest/models/Fedora14.vdi is not mutable.
+2013-03-16 14:34:17,202 DEBUG [clojure-agent-send-off-pool-0] v.manager ensure-image-is-registered: attempting to make /Users/duncan/.vmfest/models/Fedora14.vdi immutable.
+2013-03-16 14:34:17,207 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config Configuring storage for machine myproject-0: clojure.lang.LazySeq@d6e8baea
+2013-03-16 14:34:17,207 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config Configuring controller for {:name "SATA Controller", :bus :sata, :devices [{:device-type :hard-disk, :location "/Users/duncan/.vmfest/models/Fedora14.vdi", :attachment-type :multi-attach} nil nil nil]}
+2013-03-16 14:34:17,208 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config configure-controller: Configuring controller for machine 'myproject-0': {:name "SATA Controller", :bus :sata, :devices [{:device-type :hard-disk, :location "/Users/duncan/.vmfest/models/Fedora14.vdi", :attachment-type :multi-attach} nil nil nil]}
+2013-03-16 14:34:17,209 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config add-storage-controller: m=org.virtualbox_4_2.IMachine@4ef2bb57 name='SATA Controller' storage-bus SATA
+2013-03-16 14:34:17,219 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config attach-devices: Attaching devices to myproject-0 in controller SATA Controller: [{:device-type :hard-disk, :location "/Users/duncan/.vmfest/models/Fedora14.vdi", :attachment-type :multi-attach} nil nil nil]
+2013-03-16 14:34:17,223 DEBUG [clojure-agent-send-off-pool-0] v.v.machine-config attach-device: Attaching {:device-type :hard-disk, :location "/Users/duncan/.vmfest/models/Fedora14.vdi", :attachment-type :multi-attach} in controller SATA Controller slot 0 port 0 for machine myproject-0
+2013-03-16 14:34:17,246 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:17,267 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:17,330 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:17,340 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:17,362 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:17,375 DEBUG [clojure-agent-send-off-pool-0] v.v.virtualbox find-vb-m: found machine '2aa4ada5-52b1-464b-8f7a-c5fe9b57e712': org.virtualbox_4_2.IMachine@3ce4f0cf
+2013-03-16 14:34:17,393 DEBUG [clojure-agent-send-off-pool-0] v.v.machine start: Starting session for VM 2aa4ada5-52b1-464b-8f7a-c5fe9b57e712...
+2013-03-16 14:34:17,822 DEBUG [clojure-agent-send-off-pool-0] v.v.machine start: VM 2aa4ada5-52b1-464b-8f7a-c5fe9b57e712 started with result code 0
+2013-03-16 14:34:17,832 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:17,851 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:19,855 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:19,862 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:21,865 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:21,873 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:23,877 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:23,884 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:25,887 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:25,894 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:27,897 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:27,908 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:29,914 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:29,922 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:31,927 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:31,935 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:33,941 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:33,953 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:35,960 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:35,968 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:37,973 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:37,981 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:39,996 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:40,009 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:42,014 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:42,021 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:44,025 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:44,032 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:46,036 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:46,043 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:48,048 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:48,055 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:50,060 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:50,067 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:52,071 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:52,078 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:52,085 DEBUG [clojure-agent-send-off-pool-0] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:52,092 DEBUG [clojure-agent-send-off-pool-0] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,130 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,136 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,250 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,257 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,278 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,284 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,289 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,323 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,327 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,333 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,336 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,342 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,346 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,378 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,380 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,388 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:34:56,391 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:34:56,398 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:13,060 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:13,067 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:13,070 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:13,103 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:13,106 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:13,112 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:13,115 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:13,121 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:13,124 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:13,156 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:13,159 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:13,165 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:13,168 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:13,175 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:17,972 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:17,980 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:17,983 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,018 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,021 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,027 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,030 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,037 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,039 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,072 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,075 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,082 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,084 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,091 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,715 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,722 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,724 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,758 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,761 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,768 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,770 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,777 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,779 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,811 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,814 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,821 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:18,823 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:18,830 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,148 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,155 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,158 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,191 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,193 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,201 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,204 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,211 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,214 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,247 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,249 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,256 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,258 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,265 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,581 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,588 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,591 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,624 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,626 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,633 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,636 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,644 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,647 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,679 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,681 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,688 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:19,690 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:19,697 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,010 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,017 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,019 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,052 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,054 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,061 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,064 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,070 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,073 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,108 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,111 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,119 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,122 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,130 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,484 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,491 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,493 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,524 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,527 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,533 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,536 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,542 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,545 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,577 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,580 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,586 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,589 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,595 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,925 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,945 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,964 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:20,977 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:20,995 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,004 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:21,025 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,032 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:21,035 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,068 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:21,071 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,079 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:21,081 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,089 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:21,092 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,125 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:21,128 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,134 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:21,137 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,144 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:35:21,775 DEBUG [main] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:35:21,782 DEBUG [main] v.v.session unlock-machine myproject-0
+2013-03-16 14:36:22,135 DEBUG [operate-10] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:36:22,157 DEBUG [operate-10] v.v.session unlock-machine myproject-0
+2013-03-16 14:36:22,179 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:36:22,187 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:36:22,222 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:36:22,644 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:36:22,653 DEBUG [operate-11] v.v.session lock-machine myproject-0 :shared
+2013-03-16 14:36:22,671 DEBUG [operate-11] v.v.session unlock-machine myproject-0
+2013-03-16 14:36:22,690 DEBUG [operate-11] v.v.session lock-machine myproject-0 :read
+2013-03-16 14:36:22,944 DEBUG [operate-11] v.v.session lock-machine myproject-0 :read
+2013-03-16 14:36:23,198 DEBUG [operate-11] v.v.session lock-machine myproject-0 :read
+2013-03-16 14:36:23,451 DEBUG [operate-11] v.v.session lock-machine myproject-0 :read
+2013-03-16 14:36:23,703 DEBUG [operate-11] v.v.session lock-machine myproject-0 :read
+2013-03-16 14:36:23,956 DEBUG [operate-11] v.v.session lock-machine myproject-0 :read
+2013-03-16 14:36:24,209 DEBUG [operate-11] v.v.session lock-machine myproject-0 :read
+2013-03-16 14:36:24,462 DEBUG [operate-11] v.v.session lock-machine myproject-0 :read
+2013-03-16 14:36:24,718 INFO [operate-11] v.v.machine unregister: unregistering machine with name myproject-0 with cleanup DetachAllReturnHardDisksOnly
+2013-03-16 14:36:24,742 INFO [operate-11] v.v.machine delete: deleting machine myproject-0 and it's media
