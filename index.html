@@ -15,6 +15,7 @@
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <link rel="stylesheet" href="css/reveal.min.css" />
+    <link rel="stylesheet" href="css/print/pdf.css" media="print"/>
     <link rel="stylesheet" href="css/theme/simple.css" id="theme" />
     <link rel="stylesheet" href="css/github.css" />
     <link rel="stylesheet" href="css/hd.css" />
@@ -40,7 +41,7 @@
           <h3>The Pallet Project File</h3>
 
           <p class="talk-repo center">
-            <img src="images/PalletOps-Logo.jpeg"/>
+            <img src="images/PalletOps-Logo.jpeg" alt="palletops"/>
           </p>
 
           <p class="center">
@@ -60,31 +61,46 @@
           <img src="images/day-one.jpg" width="50%"/>
           </p>
           <aside class="notes">
-            one of the principles in pallet is that you should automate
+            One of the principles in pallet is that you should automate
             your infrastructure from day 1.
 
-            wherever your infrastructure is local vm, cloud, datacenter.
+            Wherever your infrastructure is -  local vm, cloud, datacenter.
+
+            Should allow you to build dev, test, staging and production.
+
+            Define once, use it everywhere.
           </aside>
         </section>
 
 
         <section>
-          <h2>pallet.clj</h2>
+          <h2>Pallet Project File</h2>
+<pre>
+ README.md
+ <span style="color:red;">pallet.clj</span>
+ project.clj
+ src
+ target
+ test
+</pre>
           <aside class="notes">
-            Sits next to your project.clj file.
+            <p>Sits next to your project.clj file.</p>
+            <p>Checked in with your project</p>
 
+            <p>Checkout your project and build a dev environment</p>
             <p>Easy to get going</p>
-            <p>Sharing project configuration</p>
             <p>Scales to complex scenarios</p>
 
-            pallet.clj gives you a way of adding pallet to an application, as
-            a single file you can checkin to source control
+            <p>
+              pallet.clj gives you a simple way of adding pallet to an application,
+              in a way that scales.
+            </p>
           </aside>
         </section>
 
         <section>
           <h2>Easy to start</h2>
-          <pre><code class="bash">lein new my-project</code></pre>
+          <!-- <pre><code class="bash">lein new my-project</code></pre> -->
           <p>In the <code>project.clj</code> file:</p>
           <pre><code class="clojure">:plugins
   [[com.palletops/pallet-lein "0.6.0-beta.7"]]</code></pre>
@@ -93,19 +109,28 @@
   :phases
    {:configure
       (plan-fn (package "postgresql-9.1"))})</code></pre>
-          <pre><code class="bash">lein pallet up</code></pre>
+          <pre><code class="bash">$ lein pallet up</code></pre>
         </section>
 
         <section>
           <h2>Now on ec2&hellip;</h2>
           <pre><code class="bash">lein pallet add-service ec2 aws-ec2 xxxx xxxx</code></pre>
           <pre><code class="bash">lein pallet --service ec2 up</code></pre>
+          <aside>
+            <p>Use the exact same code.</p>
+            <p>Can specific cloud specific images.</p>
+          </aside>
         </section>
 
 
         <section>
           <h2>As your infrastructure evolves</h2>
           <p class="center">Split out code into re-usable modules</p>
+          <p class="center">Modules are code artifacts</p>
+          <aside>
+            <p>Modules are crates</p>
+            <p>Crates are source and versionable in source and releases.</p>
+          </aside>
         </section>
 
         <section>
@@ -124,7 +149,7 @@
 
         <section>
           <p class="talk-repo center">
-            <img src="images/PalletOps-Logo.jpeg"/>
+            <img src="images/PalletOps-Logo.jpeg" alt="palletops"/>
           </p>
 
           <p class="center">
