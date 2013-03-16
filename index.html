@@ -54,26 +54,29 @@
           </p>
         </section>
 
-
         <section>
-          <h2>Pallet 0.8 Usability</h2>
+          <h2>The Infrastructure You Need</h2>
           <p class="align">
-          <img src="images/leiningen.jpg" width="15%"/>
-          <img src="images/clojars.png" width="50%" style="padding-left:5%;" />
-          <img src="images/no-thread.png" width="25%"/>
+          <img src="images/day-one.jpg" width="50%"/>
           </p>
           <aside class="notes">
-            Also explain-plan, better logging, better error reporting, etc.
+            one of the principles in pallet is that you should automate
+            your infrastructure from day 1.
+
+            wherever your infrastructure is local vm, cloud, datacenter.
           </aside>
         </section>
+
 
         <section>
           <h2>pallet.clj</h2>
           <aside class="notes">
-            sits next to your project.clj file.
+            Sits next to your project.clj file.
+
             <p>Easy to get going</p>
             <p>Sharing project configuration</p>
             <p>Scales to complex scenarios</p>
+
             pallet.clj gives you a way of adding pallet to an application, as
             a single file you can checkin to source control
           </aside>
@@ -89,8 +92,7 @@
           <pre><code class="clojure">(defproject myproject
   :phases
    {:configure
-      (plan-fn
-        (remote-file "f" :content "hello"))})</code></pre>
+      (plan-fn (package "postgresql-9.1"))})</code></pre>
           <pre><code class="bash">lein pallet up</code></pre>
         </section>
 
@@ -100,34 +102,10 @@
           <pre><code class="bash">lein pallet --service ec2 up</code></pre>
         </section>
 
-        <section>
-          <h2>Group specs</h2>
-          <pre><code class="clojure">(def group1
-  (group-spec "group1"
-    :phases
-     {:configure
-      (plan-fn
-        (remote-file "f" :content "hello"))}
-    :roles #{:db}))</code></pre>
-        </section>
 
         <section>
-          <h2>Multiple nodes</h2>
-          <pre><code class="clojure">(def group1 (group-spec...))
-(def group1 (group-spec...))
-(defproject myproject
-  :groups [group1 group])</code></pre>
-          <pre><code class="bash">lein pallet up --roles db</code></pre>
-          <p class="center">Will start/stop a node for each group</p>
-        </section>
-
-        <section>
-          <h2>As your pallet.clj grows</h2>
-          <pre><code class="clojure">
-(require '[my.ns :refer [group1 group2]])
-(defproject myproject
-  :groups [group1 group])</code></pre>
-          <p class="center"><code>pallet/src</code> is on the classpath</p>
+          <h2>As your infrastructure evolves</h2>
+          <p class="center">Split out code into re-usable modules</p>
         </section>
 
         <section>
@@ -161,6 +139,48 @@
             <a href="http://twitter.com/tbatchelli">@tbatchelli</a>
           </p>
         </section>
+
+        
+        <section>
+          <h2>Pallet</h2>
+          <p class="align">
+          <img src="images/leiningen.jpg" width="15%"/>
+          <img src="images/clojars.png" width="50%" style="padding-left:5%;" />
+          <img src="images/no-thread.png" width="25%"/>
+          </p>
+          <aside class="notes">
+            Also explain-plan, better logging, better error reporting, etc.
+          </aside>
+        </section>
+
+        <section>
+          <pre><code class="clojure">(require '[my.ns :refer [group1 group2]])
+(defproject myproject
+  :groups [group1 group])</code></pre>
+          <p class="center"><code>pallet/src</code> is on the classpath</p>
+        </section>
+
+        <section>
+          <h2>Group specs</h2>
+          <pre><code class="clojure">(def group1
+  (group-spec "group1"
+    :phases
+     {:configure
+      (plan-fn
+        (remote-file "f" :content "hello"))}
+    :roles #{:db}))</code></pre>
+        </section>
+
+        <section>
+          <h2>Multiple nodes</h2>
+          <pre><code class="clojure">(def group1 (group-spec...))
+(def group1 (group-spec...))
+(defproject myproject
+  :groups [group1 group])</code></pre>
+          <pre><code class="bash">lein pallet up --roles db</code></pre>
+          <p class="center">Will start/stop a node for each group</p>
+        </section>
+
       </div>
 
     </div>
