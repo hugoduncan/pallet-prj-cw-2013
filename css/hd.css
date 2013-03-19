@@ -112,6 +112,10 @@
     width: 100%;
 }
 
+.reveal pre.smaller {
+    font-size: 0.75em;
+}
+
 .reveal pre.threads {
     font-size: 0.40em;
     padding-left: 0em;

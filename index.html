@@ -38,7 +38,7 @@
 
         <section>
           <h1>pallet.clj</h1>
-          <h3>The Pallet Project File</h3>
+          <h3>Infrastructure Project File</h3>
 
           <p class="talk-repo center">
             <img src="images/PalletOps-Logo.jpeg" alt="palletops"/>
@@ -58,8 +58,11 @@
         <section>
           <h2>The Infrastructure You Need</h2>
           <p class="align">
-          <img src="images/day-one.jpg" width="50%"/>
+            <img src="images/day-one.jpg" width="20%"/>
           </p>
+          <p class="center">From day one.</p>
+          <p class="center">One source, many clouds, virtualisation environments.</p>
+          <p class="center">One source, many deployment environments.</p>
           <aside class="notes">
             One of the principles in pallet is that you should automate
             your infrastructure from day 1.
@@ -74,7 +77,7 @@
 
 
         <section>
-          <h2>Pallet Project File</h2>
+          <h2>Infrastructure Project File</h2>
 <pre>
  README.md
  <span style="color:red;">pallet.clj</span>
@@ -116,7 +119,7 @@
           <h2>Now on ec2&hellip;</h2>
           <pre><code class="bash">lein pallet add-service ec2 aws-ec2 xxxx xxxx</code></pre>
           <pre><code class="bash">lein pallet --service ec2 up</code></pre>
-          <aside>
+          <aside class="notes">
             <p>Use the exact same code.</p>
             <p>Can specific cloud specific images.</p>
           </aside>
@@ -125,18 +128,18 @@
 
         <section>
           <h2>As your infrastructure evolves</h2>
+          <p class="center">Split out code into functions</p>
           <p class="center">Split out code into re-usable modules</p>
           <p class="center">Modules are code artifacts</p>
-          <aside>
-            <p>Modules are crates</p>
-            <p>Crates are source and versionable in source and releases.</p>
+          <aside class="notes">
+            Modules are crates
+            Crates are source and versionable in source and releases.
           </aside>
         </section>
 
         <section>
           <h2>Testing</h2>
-          <pre><code class="clojure">
-(defproject myproject
+          <pre class="smaller"><code class="clojure">(defproject myproject
   :providers
     {:vmfest
       {:variants
@@ -145,6 +148,8 @@
          ...]}
   :groups [...])</code></pre>
           <pre><code class="bash">lein pallet up --selectors ubuntu</code></pre>
+          <pre><code class="bash">lein pallet up --groups db</code></pre>
+          <pre><code class="bash">lein pallet up --phases configure,test</code></pre>
         </section>
 
         <section>
@@ -165,7 +170,7 @@
           </p>
         </section>
 
-        
+
         <section>
           <h2>Pallet</h2>
           <p class="align">
